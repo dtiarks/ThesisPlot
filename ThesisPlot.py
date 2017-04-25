@@ -3,6 +3,7 @@ import numpy as np
 import io
 import json
 import pandas as pd
+import ast
 # Set to German locale to get comma decimal separater
 locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
 import matplotlib as mpl
@@ -41,6 +42,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "errorbar.capsize": 0,             # set standard
     "markers.fillstyle": 'none',
     "lines.markersize": 4,
+    "lines.linewidth": 1.5,
     "legend.fancybox": True,
     "text.latex.preamble": preamble,
     #    "pgf.debug" : True,
@@ -79,7 +81,22 @@ class ThesisPlot(object):
                         dfErr.sort(inplace=True)
                         yerr=np.array(dfErr.values,dtype=np.float32)
                         
-                        ax.errorbar(x,y,yerr=yerr,label=self.dicts[d]['json'][sp_ax][sp]['label'])
+                        try:
+                            label=self.dicts[d]['json'][sp_ax][sp]['label']
+                        except:
+                            label=None
+                            
+                        try:
+                            ax.set_xlabel(self.dicts[d]['json'][sp_ax][sp]['xlabel'])
+                        except:
+                            print "No xlabel in %s ax %s"%(d, sp_ax)
+                            
+                        try:
+                            ax.set_ylabel(self.dicts[d]['json'][sp_ax][sp]['ylabel'])
+                        except:
+                            print "No xlabel in %s ax %s"%(d, sp_ax)
+                        
+                        ax.errorbar(x,y,yerr=yerr,label=label)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='plot':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -87,24 +104,73 @@ class ThesisPlot(object):
                         x=np.array(df.index.values,dtype=np.float32)
                         y=np.array(df.values,dtype=np.float32)
                         
-                        ax.plot(x,y,label=self.dicts[d]['json'][sp_ax][sp]['label'])
+                        try:
+                            m=self.dicts[d]['json'][sp_ax][sp]['margin']
+                            ax.margins(*m)
+                            print "found margin"
+                        except:
+                            print "No margin"
+                        
+                        try:
+                            label=self.dicts[d]['json'][sp_ax][sp]['label']
+                        except:
+                            label=None
+                            
+                        try:
+                            ax.set_xlabel(self.dicts[d]['json'][sp_ax][sp]['xlabel'])
+                        except:
+                            print "No xlabel in %s ax %s"%(d, sp_ax)
+                            
+                        try:
+                            ax.set_ylabel(self.dicts[d]['json'][sp_ax][sp]['ylabel'])
+                        except:
+                            print "No xlabel in %s ax %s"%(d, sp_ax)
+                        
+                        ax.plot(x,y,label=label)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axh':
                         ax.axhline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=self.dicts[d]['json'][sp_ax][sp]['label'])
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axv':
                         ax.axvline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=self.dicts[d]['json'][sp_ax][sp]['label'])
                         
-                    ax.legend()
+#                    ax.legend()
+                    
+            if len(self.f.axes) > 1:
+                for n, ax in enumerate(self.f.axes):
+                    ax.text(0.1, 0.9, r'\textbf{(' + chr(len(self.f.axes)-1-n + 97) + ')}', transform=ax.transAxes,
+                            weight='bold', ha='center', va='center')
+                    # label position in window coordinates
+                    xwin, ywin = ax.transAxes.transform((0.1, 0.9))
+                    for l in ax.yaxis.get_major_ticks():
+                        # check if a label overlaps with enumeration
+                        bbox = l.label1.get_window_extent()
+                        print bbox, xwin, ywin
+                        if self._overlaps(np.array(bbox), xwin, ywin):
+                            l.label1.set_visible(False)
             
+            s=self.figsize(self.dicts[d]['size'],1.0)
+            self.f.set_size_inches(*s)
+            print self.dicts[d]['outfile']
+            self.f.savefig(self.dicts[d]['outfile'])
 #            self.f.clear()
     
+    def _overlaps(self, bbox, x, y, dist=10):
+        xs, ys = bbox.T
+        if (np.min(np.abs(xs - x)) > dist and np.prod(xs - x) > 0) or \
+                (np.min(np.abs(ys - y)) > dist and np.prod(ys - y) > 0):
+            return False
+        else:
+            # print np.min(np.abs(xs-x)), np.prod(xs-x), np.min(np.abs(ys-y)),
+            # np.prod(ys-y)
+            return True
+        
     def parsePlotDict(self,filename):
         with io.open(filename, 'r', encoding='utf-8') as f:
             plotDict=json.load(f)
             
         return plotDict
 
-    def addPlot(self,name,outname,figid):
-        self.dicts.update({figid:{'infile':name,'outfile':outname,'json':self.parsePlotDict(name)}})
+    def addPlot(self,name,outname,figid,size=2):
+        self.dicts.update({figid:{'infile':name,'outfile':outname,'size':size,'json':self.parsePlotDict(name)}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
@@ -119,7 +185,7 @@ class ThesisPlot(object):
 
 if __name__=='__main__':
     TP=ThesisPlot()
-    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_2_groupdelay.pgf","Chap2_Fig2.2")
-#    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_3_groupdelay.pgf","Chap2_Fig2.3")
+#    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_2_groupdelay.pgf","Chap2_Fig2.2")
+    TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2)
     
     TP.generatePlots()
