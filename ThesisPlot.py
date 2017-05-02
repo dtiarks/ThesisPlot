@@ -57,6 +57,10 @@ import matplotlib.pyplot as plt
 
 
 class ThesisPlot(object):
+    
+    colors=['b','r','g','k','y']
+    linestyles=['-','-','-','-','-','-']
+    linewidths=[1.5,1.5,1.5,1.5,1.5,1.5]
 
     def __init__(self):
         self.dicts=dict()
@@ -68,7 +72,19 @@ class ThesisPlot(object):
             for sp_ax in self.dicts[d]['json']:
                 ax=self.f.add_subplot(sp_ax)
                 
-                for sp in self.dicts[d]['json'][sp_ax]:
+                cs=self.dicts[d]['color']
+                if cs==None:
+                    cs=self.colors
+                
+                ls=self.dicts[d]['linestyle']
+                if ls==None:
+                    ls=self.linestyles
+                    
+                lws=self.dicts[d]['linewidths']
+                if lws==None:
+                    lws=self.linewidths
+                
+                for (c,l,lw,sp) in zip(cs[:len(self.dicts[d]['json'][sp_ax])],ls[:len(self.dicts[d]['json'][sp_ax])],lws[:len(self.dicts[d]['json'][sp_ax])],self.dicts[d]['json'][sp_ax]):
                     if self.dicts[d]['json'][sp_ax][sp]['type']=='errorbar':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -96,7 +112,7 @@ class ThesisPlot(object):
                         except:
                             print "No xlabel in %s ax %s"%(d, sp_ax)
                         
-                        ax.errorbar(x,y,yerr=yerr,label=label)
+                        ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='plot':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -126,11 +142,20 @@ class ThesisPlot(object):
                         except:
                             print "No xlabel in %s ax %s"%(d, sp_ax)
                         
-                        ax.plot(x,y,label=label)
+                        ax.plot(x,y,label=label,color=c,ls=l,lw=lw)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axh':
-                        ax.axhline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=self.dicts[d]['json'][sp_ax][sp]['label'])
+                        try:
+                            label=self.dicts[d]['json'][sp_ax][sp]['label']
+                        except:
+                            label=None
+                            
+                        ax.axhline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=label,color=c,ls=l,lw=lw)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axv':
-                        ax.axvline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=self.dicts[d]['json'][sp_ax][sp]['label'])
+                        try:
+                            label=self.dicts[d]['json'][sp_ax][sp]['label']
+                        except:
+                            label=None
+                        ax.axvline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=label,color=c,ls=l,lw=lw)
                         
 #                    ax.legend()
                     
@@ -169,8 +194,8 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2):
-        self.dicts.update({figid:{'infile':name,'outfile':outname,'size':size,'json':self.parsePlotDict(name)}})
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None):
+        self.dicts.update({figid:{'infile':name,'outfile':outname,'size':size,'json':self.parsePlotDict(name),'linestyle':ls,'color':cs,'linewidths':lw}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
@@ -186,6 +211,6 @@ class ThesisPlot(object):
 if __name__=='__main__':
     TP=ThesisPlot()
 #    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_2_groupdelay.pgf","Chap2_Fig2.2")
-    TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2)
+    TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2,cs=['b','k','r'],ls=['-','--','-'],lw=[1.5,1,1.5])
     
     TP.generatePlots()

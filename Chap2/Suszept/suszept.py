@@ -36,6 +36,7 @@ f=plt.figure()
 plt.subplot(221)
 plt.plot(detuning, np.imag(chi), ls='-',lw=1.5,color='b')
 plt.plot(detuning, np.imag(chi_2L), ls='-',lw=1.5,color='g')
+plt.axvline(0, ls='--',lw=1.0)
 #plt.xlabel(u'$\Delta_s / \Gamma_3$')
 plt.ylabel(u'Im($\chi / \chi_0$)')
 plt.margins(0,0.1)
@@ -44,8 +45,9 @@ plt.margins(0,0.1)
 h=pd.DataFrame(index=detuning,data=np.imag(chi))
 h2=pd.DataFrame(index=detuning,data=np.imag(chi_2L))
 plot_dict['221']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'Im($\chi / \chi_0$)','margin':(0,0.1)},                
-    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.1)}
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'Im($\chi / \chi_0$)','margin':(0,0.0)},                
+    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.0)},
+    'C':{'type':'axv','y':0}
 }
 
 plt.subplot(223)
@@ -55,13 +57,15 @@ plt.plot(detuning, np.real(chi_2L), ls='-',lw=1.5)
 plt.ylabel(u'Re($\chi / \chi_0$)')
 plt.yticks(np.arange(-0.4, 0.6, 0.2))
 plt.margins(0,0.1)
+plt.axvline(0, ls='--',lw=1.0)
 #plt.tight_layout()
 
 h=pd.DataFrame(index=detuning,data=np.real(chi))
 h2=pd.DataFrame(index=detuning,data=np.real(chi_2L))
 plot_dict['223']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'Re($\chi / \chi_0$)','xlabel':u'$\Delta_s / \Gamma_3$','margin':(0,0.1)},                
-    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.1)}
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'Re($\chi / \chi_0$)','xlabel':u'$\Delta_s / \Gamma_3$','margin':(0,0.0)},                
+    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.0)},
+    'C':{'type':'axv','y':0}
 }
 
 # detuned eit
@@ -82,13 +86,15 @@ plt.plot(detuning, np.imag(chi_2L), ls='-',lw=1.5)
 plt.xlabel(u'$\Delta_s / \Gamma_3$')
 #plt.ylabel(u'Im($\chi / \chi_0$)')
 plt.margins(0,0.1)
+plt.axvline(-1.5, ls='--',lw=1.0)
 #plt.tight_layout()
 
 h=pd.DataFrame(index=detuning,data=np.imag(chi))
 h2=pd.DataFrame(index=detuning,data=np.imag(chi_2L))
 plot_dict['222']={
-    'A':{'type':'plot','y':h[0].to_json(),'margin':(0,0.1)},                
-    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.1)}
+    'A':{'type':'plot','y':h[0].to_json(),'margin':(0,0.0)},                
+    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.0)},
+    'C':{'type':'axv','y':-1.5}
 }
 
 plt.subplot(224)
@@ -98,13 +104,15 @@ plt.xlabel(u'$\Delta_s / \Gamma_3$')
 #plt.ylabel(u'Re($\chi / \chi_0$)')
 plt.yticks(np.arange(-0.4, 0.6, 0.2))
 plt.margins(0,0.1)
+plt.axvline(-1.5, ls='--',lw=1.0)
 #plt.tight_layout()
 
 h=pd.DataFrame(index=detuning,data=np.real(chi))
 h2=pd.DataFrame(index=detuning,data=np.real(chi_2L))
 plot_dict['224']={
-    'A':{'type':'plot','y':h[0].to_json(),'xlabel':u'$\Delta_s / \Gamma_3$','margin':(0,0.1)},                
-    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.1)}
+    'A':{'type':'plot','y':h[0].to_json(),'xlabel':u'$\Delta_s / \Gamma_3$','margin':(0,0.0)},                
+    'B':{'type':'plot','y':h2[0].to_json(),'margin':(0,0.0)},
+    'C':{'type':'axv','y':-1.5}
 }
 
 with io.open('suszept.json', 'w+') as f:
