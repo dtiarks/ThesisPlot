@@ -31,21 +31,25 @@ h=pd.DataFrame(index=[0],data=[0])
 #ax1.plot([0],[0])
 
 plot_dict={}
-plot_dict['221']={
+plot_dict['121']={
+                    'A':{'type':'plot','label':'test','y':h.to_json()}
+                 }
+                
+plot_dict['122']={
                     'A':{'type':'plot','label':'test','y':h.to_json()}
                  }
                  
-plot_dict['222']={
-                    'A':{'type':'plot','label':'test','y':h.to_json()}
-                 }
+#plot_dict['222']={
+#                    'A':{'type':'plot','label':'test','y':h.to_json()}
+#                 }
+#                 
+#plot_dict['223']={
+#                    'A':{'type':'plot','label':'test','y':h.to_json()}
+#                 }
+#                 
+#plot_dict['224']={
+#                    'A':{'type':'plot','label':'test','y':h.to_json()}
+#                 }
                  
-plot_dict['223']={
-                    'A':{'type':'plot','label':'test','y':h.to_json()}
-                 }
-                 
-plot_dict['224']={
-                    'A':{'type':'plot','label':'test','y':h.to_json()}
-                 }
-                 
-with io.open('blank2.json', 'w') as f:
+with io.open('blank1.json', 'w') as f:
   f.write(unicode(json.dumps(plot_dict, ensure_ascii=False)))
