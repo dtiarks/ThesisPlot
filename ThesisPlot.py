@@ -83,6 +83,10 @@ class ThesisPlot(object):
                 lws=self.dicts[d]['linewidths']
                 if lws==None:
                     lws=self.linewidths
+                    
+                tl=self.dicts[d]['tight']
+                if tl:
+                    self.f.tight_layout(w_pad=self.dicts[d]['wpad'])
                 
                 for (c,l,lw,sp) in zip(cs[:len(self.dicts[d]['json'][sp_ax])],ls[:len(self.dicts[d]['json'][sp_ax])],lws[:len(self.dicts[d]['json'][sp_ax])],self.dicts[d]['json'][sp_ax]):
                     if self.dicts[d]['json'][sp_ax][sp]['type']=='errorbar':
@@ -111,6 +115,18 @@ class ThesisPlot(object):
                             ax.set_ylabel(self.dicts[d]['json'][sp_ax][sp]['ylabel'])
                         except:
                             print "No xlabel in %s ax %s"%(d, sp_ax)
+                            
+                        try:
+                            xl=self.dicts[d]['json'][sp_ax][sp]['xlim']
+                            ax.set_xlim(*xl)
+                        except:
+                            print "No x-limit found"
+                            
+                        try:
+                            yl=self.dicts[d]['json'][sp_ax][sp]['ylim']
+                            ax.set_ylim(*yl)
+                        except:
+                            print "No y-limit found"
                         
                         ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='plot':
@@ -141,6 +157,18 @@ class ThesisPlot(object):
                             ax.set_ylabel(self.dicts[d]['json'][sp_ax][sp]['ylabel'])
                         except:
                             print "No xlabel in %s ax %s"%(d, sp_ax)
+                         
+                        try:
+                            xl=self.dicts[d]['json'][sp_ax][sp]['xlim']
+                            ax.set_xlim(*xl)
+                        except:
+                            print "No x-limit found"
+                        
+                        try:
+                            yl=self.dicts[d]['json'][sp_ax][sp]['ylim']
+                            ax.set_ylim(*yl)
+                        except:
+                            print "No y-limit found"
                         
                         ax.plot(x,y,label=label,color=c,ls=l,lw=lw)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axh':
@@ -158,24 +186,39 @@ class ThesisPlot(object):
                         ax.axvline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=label,color=c,ls=l,lw=lw)
                         
 #                    ax.legend()
+                    try:
+                        num=self.dicts[d]['json'][sp_ax][sp]['num']
+                    except:
+                        num=None
+                    if num is not None:
+                        ax.text(0.1, 0.9, r'\textbf{(' + num + ')}', transform=ax.transAxes,
+                                weight='bold', ha='center', va='center')
+                        xwin, ywin = ax.transAxes.transform((0.1, 0.9))
+                        for l in ax.yaxis.get_major_ticks():
+                            # check if a label overlaps with enumeration
+                            bbox = l.label1.get_window_extent()
+                            print bbox, xwin, ywin
+                            if self._overlaps(np.array(bbox), xwin, ywin):
+                                l.label1.set_visible(False)
                     
-            if len(self.f.axes) > 1:
-                for n, ax in enumerate(self.f.axes):
-                    ax.text(0.1, 0.9, r'\textbf{(' + chr(len(self.f.axes)-1-n + 97) + ')}', transform=ax.transAxes,
-                            weight='bold', ha='center', va='center')
-                    # label position in window coordinates
-                    xwin, ywin = ax.transAxes.transform((0.1, 0.9))
-                    for l in ax.yaxis.get_major_ticks():
-                        # check if a label overlaps with enumeration
-                        bbox = l.label1.get_window_extent()
-                        print bbox, xwin, ywin
-                        if self._overlaps(np.array(bbox), xwin, ywin):
-                            l.label1.set_visible(False)
+#            if len(self.f.axes) > 1:
+#                for n, ax in enumerate(self.f.axes):
+#                    ax.text(0.1, 0.9, r'\textbf{(' + chr(len(self.f.axes)-1-n + 97) + ')}', transform=ax.transAxes,
+#                            weight='bold', ha='center', va='center')
+#                    # label position in window coordinates
+#                    xwin, ywin = ax.transAxes.transform((0.1, 0.9))
+#                    for l in ax.yaxis.get_major_ticks():
+#                        # check if a label overlaps with enumeration
+#                        bbox = l.label1.get_window_extent()
+#                        print bbox, xwin, ywin
+#                        if self._overlaps(np.array(bbox), xwin, ywin):
+#                            l.label1.set_visible(False)
             
             s=self.figsize(self.dicts[d]['size'],1.0)
             self.f.set_size_inches(*s)
             print self.dicts[d]['outfile']
             self.f.savefig(self.dicts[d]['outfile'])
+            self.f.savefig(self.dicts[d]['outfile']+".pdf")
 #            self.f.clear()
     
     def _overlaps(self, bbox, x, y, dist=10):
@@ -194,8 +237,16 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None):
-        self.dicts.update({figid:{'infile':name,'outfile':outname,'size':size,'json':self.parsePlotDict(name),'linestyle':ls,'color':cs,'linewidths':lw}})
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.):
+        self.dicts.update({figid:{'infile':name,
+                                  'outfile':outname,
+                                  'size':size,
+                                  'json':self.parsePlotDict(name),
+                                  'linestyle':ls,
+                                  'color':cs,
+                                  'linewidths':lw,
+                                  'tight':tl,
+                                  'wpad':w_pad}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
@@ -213,5 +264,6 @@ if __name__=='__main__':
 #    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_2_groupdelay.pgf","Chap2_Fig2.2")
     TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2,cs=['b','k','r'],ls=['-','--','-'],lw=[1.5,1,1.5])
     TP.addPlot(r"blank1.json","2_3_blank.pgf","Chap2_Fig2.3",size=1)
+    TP.addPlot("Chap2\Transient\eit_propagation.json","2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.4)
     
     TP.generatePlots()
