@@ -54,11 +54,11 @@ sim_pars = {
                          },
                          
                 # input pulse
-                "tRMS" : 0.2e-6, # RMS width of the input gaussian
+                "tRMS" : 0.01e-6, # RMS width of the input gaussian
                 "tW" : 3e-6, # width of the rectangular input pulse
                 "Delta_s0" : -2*Gamma_e, # detuning of the signal laser from resonance (rad/s)
                 "S3_in" : -0.75, # Input S3 parameter, translates to (p_R - p_L) / (p_R + p_L)
-                "in_func" :  '''lambda times, **kwargs: np.sqrt(  PHI((kwargs["tL"]/2 - kwargs["tW"]/2 - times)/(-0.05e-6) ) * PHI((kwargs["tL"]/2 + kwargs["tW"]/2 - times)/0.05e-6) ) * np.exp(-1j * kwargs["Delta_s0"] * times)'''#'''lambda times, **kwargs: np.sqrt( np.exp(- 0.5 * (times - kwargs["tL"]/2)**2/(kwargs["tRMS"])**2) * PHI((kwargs["tL"]/2 - times)/0.015e-6) ) * np.exp(-1j * kwargs["Delta_s0"] * times)'''
+                "in_func" :  '''lambda times, **kwargs: np.sqrt(  PHI((kwargs["tL"]/2 - kwargs["tW"]/2 - times)/(-0.0005e-6) ) * PHI((kwargs["tL"]/2 + kwargs["tW"]/2 - times)/0.0005e-6) ) * np.exp(-1j * kwargs["Delta_s0"] * times)'''#'''lambda times, **kwargs: np.sqrt( np.exp(- 0.5 * (times - kwargs["tL"]/2)**2/(kwargs["tRMS"])**2) * PHI((kwargs["tL"]/2 - times)/0.015e-6) ) * np.exp(-1j * kwargs["Delta_s0"] * times)'''
                 # the half-gaussian envelope of the pulse as in the experiment control code. using an error function (PHI) to smoothen
                 # the cut like the AOM would do (with a time constant of about 20 ns). 
             }
@@ -131,6 +131,8 @@ def simulate_propagation(sim_pars):
     print "finished after %f seconds" % (time.time()-start_time)
     
     microsecs = 1e6*(times - tL/2)
+    xaxis=(Gamma_e*(times - tL/2)+57)
+    print xaxis[len(microsecs)/2-2400:len(microsecs)/2+2400]
     
     pulse_in=np.abs(envelope)**2
     max_in=np.max(pulse_in)
@@ -144,34 +146,37 @@ def simulate_propagation(sim_pars):
     
     plt.subplot(121)
 #    plt.plot(microsecs, 0.5*(1+S3_in)*np.abs(envelope_gs)**2, 'k-', label='GS, transm. = %2.3f %%' % (100*norm(envelope_gs, tL, N)), color='orange')
-    plt.plot(microsecs[len(microsecs)/2-2400:len(microsecs)/2+2400], pulse_out[len(microsecs)/2-2400:len(microsecs)/2+2400], 'k-', label='Ryd, transm. = %2.3f %%' % (100*norm(envelope_ryd, tL, N)), color='cyan')
-    plt.plot(microsecs[len(microsecs)/2-2400:len(microsecs)/2+2400], pulse_in[len(microsecs)/2-2400:len(microsecs)/2+2400])
-    plt.xlim(- 3, 3)
+    plt.plot(xaxis[len(microsecs)/2-2400:len(microsecs)/2+2400], pulse_out[len(microsecs)/2-2400:len(microsecs)/2+2400], 'k-', label='Ryd, transm. = %2.3f %%' % (100*norm(envelope_ryd, tL, N)), color='cyan')
+    plt.plot(xaxis[len(microsecs)/2-2400:len(microsecs)/2+2400], pulse_in[len(microsecs)/2-2400:len(microsecs)/2+2400])
+    plt.xlim(-57.,171.)
     
-    h=pd.DataFrame(index=microsecs[len(microsecs)/2-2400:len(microsecs)/2+2400],data=pulse_out[len(microsecs)/2-2400:len(microsecs)/2+2400])
-    h2=pd.DataFrame(index=microsecs[len(microsecs)/2-2400:len(microsecs)/2+2400],data=pulse_in[len(microsecs)/2-2400:len(microsecs)/2+2400])
+    h=pd.DataFrame(index=xaxis[len(microsecs)/2-2400:len(microsecs)/2+2400],data=pulse_out[len(microsecs)/2-2400:len(microsecs)/2+2400])
+    h2=pd.DataFrame(index=xaxis[len(microsecs)/2-2400:len(microsecs)/2+2400],data=pulse_in[len(microsecs)/2-2400:len(microsecs)/2+2400])
     plot_dict['121']={
-        'A':{'type':'plot','y':h2[0].to_json(),'xlim':(-3.,3.)},
-        'B':{'type':'plot','y':h[0].to_json(),'ylabel':u'Normierte Int.','xlabel':u'Zeit ($\mu s$)','xlim':(-3.,3.),'ylim':(0.,1.1),'num':'a'}
+        'A':{'type':'plot','y':h2[0].to_json(),'xlim':(-57.,171.)},
+        'B':{'type':'plot','y':h[0].to_json(),'ylabel':u'Normierte Intensit\"at\quad','xlabel':u'Zeit ($1/\Gamma_3$)','xlim':(-57.,171.),'ylim':(0.,1.1),'num':'a'}
         
     }
     
     plt.subplot(122)
-    plt.plot(microsecs[len(microsecs)/2-1400:len(microsecs)/2+1400], phases[len(microsecs)/2-1400:len(microsecs)/2+1400], color='purple')
+    nlow=1250
+    nhigh=1400
+    nhigh=nlow
+    plt.plot(xaxis[len(microsecs)/2-nlow:len(microsecs)/2+nhigh], phases[len(microsecs)/2-nlow:len(microsecs)/2+nhigh], color='purple')
 #    plt.axhline(np.mean(phases_cw[len(microsecs)/2-1400:len(microsecs)/2+1400]))
     plt.axhline(-0.5*omega_s/c * L *chi_0*Gamma_e*np.real(susceptibility(K["Delta_s0"], **ryd_EIT) )%(2*np.pi)-np.pi)
-    plt.xlim(- 3, + 3)
+    plt.xlim(-57.,171.)
     plt.ylim(-np.pi, np.pi)
     
-    h=pd.DataFrame(index=microsecs[len(microsecs)/2-1400:len(microsecs)/2+1400],data=phases[len(microsecs)/2-1400:len(microsecs)/2+1400])
+    h=pd.DataFrame(index=xaxis[len(microsecs)/2-nlow:len(microsecs)/2+nhigh],data=phases[len(microsecs)/2-nlow:len(microsecs)/2+nhigh])
     plot_dict['122']={
         'A':{'type':'axh','y':-0.5*omega_s/c * L *chi_0*Gamma_e*np.real(susceptibility(K["Delta_s0"], **ryd_EIT) )%(2*np.pi)-np.pi},
-        'B':{'type':'plot','y':h[0].to_json(),'ylabel':u'Phase (rad)','xlabel':u'Zeit ($\mu s$)','xlim':(-3.,3.),'ylim':(-1*np.pi,np.pi),'num':'b'}
+        'B':{'type':'plot','y':h[0].to_json(),'ylabel':u'Phase (rad)','xlabel':u'Zeit ($1/\Gamma_3$)','xlim':(-57.,171.),'ylim':(-1*np.pi,np.pi),'num':'b'}
         
     }
     
-#    with io.open('eit_propagation.json', 'w+') as f:
-#        f.write(json.dumps(plot_dict, ensure_ascii=False,indent=4))
+    with io.open('eit_propagation.json', 'w+') as f:
+        f.write(json.dumps(plot_dict, ensure_ascii=False,indent=4))
        
     if SHOW_RESULT:
         

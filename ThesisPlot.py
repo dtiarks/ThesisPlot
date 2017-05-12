@@ -38,7 +38,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "legend.fontsize": 10,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 10,
     "ytick.labelsize": 10,
-    "figure.figsize": [5.67, 1.75],   # default fig size of 0.9 textwidth
+    "figure.figsize": [0.9*5.67, 1.75],   # default fig size of 0.9 textwidth
     "errorbar.capsize": 0,             # set standard
     "markers.fillstyle": 'none',
     "lines.markersize": 4,
