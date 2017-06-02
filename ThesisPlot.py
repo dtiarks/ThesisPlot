@@ -35,20 +35,22 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "font.monospace": [],
     "axes.labelsize": 11,               # LaTeX default is 10pt font.
     "font.size": 11,
-    "legend.fontsize": 10,               # Make the legend/label fonts a little smaller
+    "legend.fontsize": 6.5,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 10,
     "ytick.labelsize": 10,
-    "figure.figsize": [0.9*5.67, 1.75],   # default fig size of 0.9 textwidth
+    "figure.figsize": [1*5.67, 1.75],   # default fig size of 0.9 textwidth
     "errorbar.capsize": 0,             # set standard
-    "markers.fillstyle": 'none',
+#    "markers.fillstyle": 'none',
     "lines.markersize": 4,
     "lines.linewidth": 1.5,
     "legend.fancybox": True,
     "text.latex.preamble": preamble,
     #    "pgf.debug" : True,
+    #"legend.loc": 1,
     "pgf.preamble": preamble,
     "legend.numpoints": 1,
-    "axes.formatter.use_locale": True
+    "axes.formatter.use_locale": True,
+    "figure.subplot.bottom" : 0.19
 }
 
 mpl.rcParams.update(pgf_with_latex)
@@ -171,6 +173,48 @@ class ThesisPlot(object):
                             print "No y-limit found"
                         
                         ax.plot(x,y,label=label,color=c,ls=l,lw=lw)
+                    elif self.dicts[d]['json'][sp_ax][sp]['type']=='scatter':
+                        df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
+                        df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
+                        df.sort(inplace=True)
+                        x=np.array(df.index.values,dtype=np.float32)
+                        y=np.array(df.values,dtype=np.float32)
+                        
+                        try:
+                            m=self.dicts[d]['json'][sp_ax][sp]['margin']
+                            ax.margins(*m)
+                            print "found margin"
+                        except:
+                            print "No margin"
+                        
+                        try:
+                            label=self.dicts[d]['json'][sp_ax][sp]['label']
+                        except:
+                            label=None
+                            
+                        try:
+                            ax.set_xlabel(self.dicts[d]['json'][sp_ax][sp]['xlabel'])
+                        except:
+                            print "No xlabel in %s ax %s"%(d, sp_ax)
+                            
+                        try:
+                            ax.set_ylabel(self.dicts[d]['json'][sp_ax][sp]['ylabel'])
+                        except:
+                            print "No xlabel in %s ax %s"%(d, sp_ax)
+                         
+                        try:
+                            xl=self.dicts[d]['json'][sp_ax][sp]['xlim']
+                            ax.set_xlim(*xl)
+                        except:
+                            print "No x-limit found"
+                        
+                        try:
+                            yl=self.dicts[d]['json'][sp_ax][sp]['ylim']
+                            ax.set_ylim(*yl)
+                        except:
+                            print "No y-limit found"
+                        
+                        ax.scatter(x,y,label=label,color=c,marker='o',s=7)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axh':
                         try:
                             label=self.dicts[d]['json'][sp_ax][sp]['label']
@@ -185,7 +229,9 @@ class ThesisPlot(object):
                             label=None
                         ax.axvline(np.float(self.dicts[d]['json'][sp_ax][sp]['y']),label=label,color=c,ls=l,lw=lw)
                         
-#                    ax.legend()
+#                    
+                    if self.dicts[d]['legend']:
+                        ax.legend(loc=4)
                     try:
                         num=self.dicts[d]['json'][sp_ax][sp]['num']
                     except:
@@ -237,7 +283,7 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,legend=False):
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -246,7 +292,8 @@ class ThesisPlot(object):
                                   'color':cs,
                                   'linewidths':lw,
                                   'tight':tl,
-                                  'wpad':w_pad}})
+                                  'wpad':w_pad,
+                                  'legend':legend}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
@@ -262,8 +309,9 @@ class ThesisPlot(object):
 if __name__=='__main__':
     TP=ThesisPlot()
 #    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_2_groupdelay.pgf","Chap2_Fig2.2")
-    TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2,cs=['b','k','r'],ls=['-','--','-'],lw=[1.5,1,1.5])
-    TP.addPlot(r"blank1.json","2_3_blank.pgf","Chap2_Fig2.3",size=1)
-    TP.addPlot("Chap2\Transient\eit_propagation.json","2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.4)
+#    TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2,cs=['b','k','r'],ls=['-','--','-'],lw=[1.5,1,1.5])
+#    TP.addPlot(r"blank1.json","2_3_blank.pgf","Chap2_Fig2.3",size=1)
+#    TP.addPlot("Chap2\Transient\eit_propagation.json","2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.4)
+    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True)
     
     TP.generatePlots()
