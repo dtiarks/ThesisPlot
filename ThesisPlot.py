@@ -35,13 +35,13 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "font.monospace": [],
     "axes.labelsize": 11,               # LaTeX default is 10pt font.
     "font.size": 11,
-    "legend.fontsize": 6.5,               # Make the legend/label fonts a little smaller
+    "legend.fontsize": 10,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 10,
     "ytick.labelsize": 10,
     "figure.figsize": [1*5.67, 1.75],   # default fig size of 0.9 textwidth
     "errorbar.capsize": 0,             # set standard
 #    "markers.fillstyle": 'none',
-    "lines.markersize": 4,
+    "lines.markersize": 1,
     "lines.linewidth": 1.5,
     "legend.fancybox": True,
     "text.latex.preamble": preamble,
@@ -49,6 +49,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     #"legend.loc": 1,
     "pgf.preamble": preamble,
     "legend.numpoints": 1,
+    "legend.scatterpoints": 1,
     "axes.formatter.use_locale": True,
     "figure.subplot.bottom" : 0.19
 }
@@ -214,7 +215,7 @@ class ThesisPlot(object):
                         except:
                             print "No y-limit found"
                         
-                        ax.scatter(x,y,label=label,color=c,marker='o',s=7)
+                        ax.scatter(x,y,label=label,color=c,marker='o',s=10)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='axh':
                         try:
                             label=self.dicts[d]['json'][sp_ax][sp]['label']
@@ -231,7 +232,7 @@ class ThesisPlot(object):
                         
 #                    
                     if self.dicts[d]['legend']:
-                        ax.legend(loc=4)
+                        ax.legend(loc=1)
                     try:
                         num=self.dicts[d]['json'][sp_ax][sp]['num']
                     except:
@@ -312,6 +313,6 @@ if __name__=='__main__':
 #    TP.addPlot("Chap2\Suszept\suszept.json","2_1_suszept.pgf","Chap2_Fig2.1",size=2,cs=['b','k','r'],ls=['-','--','-'],lw=[1.5,1,1.5])
 #    TP.addPlot(r"blank1.json","2_3_blank.pgf","Chap2_Fig2.3",size=1)
 #    TP.addPlot("Chap2\Transient\eit_propagation.json","2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.4)
-    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True)
+    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True,cs=['b','r','k'])
     
     TP.generatePlots()
