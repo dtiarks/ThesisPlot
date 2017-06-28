@@ -33,7 +33,7 @@ def vdW_pot(r, r0):
 Delta_c = 0
 Delta_p = 0
 gamma_21 = 0
-Omega_c = 1.5
+Omega_c = 1.8
 
 # calculate the curve
 Rs = np.linspace(0, 40e-6, 400)
