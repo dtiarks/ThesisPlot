@@ -38,12 +38,13 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "legend.fontsize": 10,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 10,
     "ytick.labelsize": 10,
-    "figure.figsize": [1*5.67, 1.75],   # default fig size of 0.9 textwidth
+    "figure.figsize": [1*5.67, 1.76],   # default fig size of 0.9 textwidth
     "errorbar.capsize": 0,             # set standard
 #    "markers.fillstyle": 'none',
     "lines.markersize": 1,
     "lines.linewidth": 1.5,
     "legend.fancybox": True,
+    "mathtext.fontset": "cm",
     "text.latex.preamble": preamble,
     #    "pgf.debug" : True,
     #"legend.loc": 1,
@@ -89,7 +90,7 @@ class ThesisPlot(object):
                     
                 tl=self.dicts[d]['tight']
                 if tl:
-                    self.f.tight_layout(w_pad=self.dicts[d]['wpad'])
+                    self.f.tight_layout(w_pad=self.dicts[d]['wpad'],h_pad=self.dicts[d]['hpad'])
                 
                 for (c,l,lw,sp) in zip(cs[:len(self.dicts[d]['json'][sp_ax])],ls[:len(self.dicts[d]['json'][sp_ax])],lws[:len(self.dicts[d]['json'][sp_ax])],self.dicts[d]['json'][sp_ax]):
                     if self.dicts[d]['json'][sp_ax][sp]['type']=='errorbar':
@@ -262,6 +263,7 @@ class ThesisPlot(object):
 #                            l.label1.set_visible(False)
             
             s=self.figsize(self.dicts[d]['size'],1.0)
+            self.f.subplots_adjust(bottom=0.2) 
             self.f.set_size_inches(*s)
             print self.dicts[d]['outfile']
             self.f.savefig(self.dicts[d]['outfile'])
@@ -284,7 +286,7 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,legend=False):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False):
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -294,6 +296,7 @@ class ThesisPlot(object):
                                   'linewidths':lw,
                                   'tight':tl,
                                   'wpad':w_pad,
+                                  'hpad':h_pad,
                                   'legend':legend}})
 
     def figsize(self, rows, scale):
@@ -301,7 +304,7 @@ class ThesisPlot(object):
         fig_width_pt = 455.24416
         inches_per_pt = 1.0 / 72.27                       # Convert pt to inch
         # Aesthetic ratio (you could change this) * 0.5
-        golden_mean = rows * 0.5 * (np.sqrt(5.0) - 1.0) / 2.0
+        golden_mean = rows * 0.51 * (np.sqrt(5.0) - 1.0) / 2.0
         fig_width = fig_width_pt * inches_per_pt * scale    # width in inches
         fig_height = fig_width * golden_mean              # height in inches
         fig_size = [fig_width, fig_height]
@@ -314,6 +317,7 @@ if __name__=='__main__':
 #    TP.addPlot(r"blank1.json","2_3_blank.pgf","Chap2_Fig2.3",size=1)
 #    TP.addPlot("Chap2\Transient\eit_propagation.json","2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.4)
 #    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True,cs=['b','r','k'])
-    TP.addPlot(r"Chap2\BlockadeSuszept\blockade_suszept.json","2_7_blockade_suszept.pgf","Chap2_Fig2.7",size=1.0,legend=True,cs=['b','r'])
+#    TP.addPlot(r"Chap2\BlockadeSuszept\blockade_suszept.json","2_7_blockade_suszept.pgf","Chap2_Fig2.7",size=1.0,legend=True,cs=['b','r'])
+    TP.addPlot(r"Chap2\KondPhase\cond_phase.json","2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True)
     
     TP.generatePlots()
