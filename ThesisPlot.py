@@ -233,7 +233,7 @@ class ThesisPlot(object):
                         
 #                    
                     if self.dicts[d]['legend']:
-                        ax.legend(loc=1)
+                        ax.legend(loc=self.dicts[d]['loc'])
                     try:
                         num=self.dicts[d]['json'][sp_ax][sp]['num']
                     except:
@@ -286,7 +286,7 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1):
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -297,6 +297,7 @@ class ThesisPlot(object):
                                   'tight':tl,
                                   'wpad':w_pad,
                                   'hpad':h_pad,
+                                  'loc':lloc,
                                   'legend':legend}})
 
     def figsize(self, rows, scale):
@@ -318,6 +319,7 @@ if __name__=='__main__':
 #    TP.addPlot("Chap2\Transient\eit_propagation.json","2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.4)
 #    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True,cs=['b','r','k'])
 #    TP.addPlot(r"Chap2\BlockadeSuszept\blockade_suszept.json","2_7_blockade_suszept.pgf","Chap2_Fig2.7",size=1.0,legend=True,cs=['b','r'])
-    TP.addPlot(r"Chap2\KondPhase\cond_phase.json","2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True)
+#    TP.addPlot(r"Chap2\KondPhase\cond_phase.json","2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True)
+    TP.addPlot(r"Chap2\Molecules\avg_number.json","2_9_avg_number.pgf","Chap2_Fig2.9",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=2)
     
     TP.generatePlots()
