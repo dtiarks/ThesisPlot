@@ -90,7 +90,7 @@ plt.axhline(1)
 h=pd.DataFrame(index=rhos/1e18,data=rhos*Vcl1)
 h2=pd.DataFrame(index=rhos/1e18,data=rhos*Vcl2)
 plot_dict['111']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\left\langle n_r\right\rangle$','xlabel':r'$\varrho$ $(1\cdot 10^{12}\ \mathrm{cm}^-3)$','label':'$n=69$'},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\left\langle N_r\right\rangle$','xlabel':r'$\varrho$ $(10^{12}\ \mathrm{cm}^{-3})$','label':'$n=69$'},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':'$n=100$'},
     'C':{'type':'axh','y':1}
 }

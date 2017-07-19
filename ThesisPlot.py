@@ -320,6 +320,7 @@ if __name__=='__main__':
 #    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True,cs=['b','r','k'])
 #    TP.addPlot(r"Chap2\BlockadeSuszept\blockade_suszept.json","2_7_blockade_suszept.pgf","Chap2_Fig2.7",size=1.0,legend=True,cs=['b','r'])
 #    TP.addPlot(r"Chap2\KondPhase\cond_phase.json","2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True)
-    TP.addPlot(r"Chap2\Molecules\avg_number.json","2_9_avg_number.pgf","Chap2_Fig2.9",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=2)
+#    TP.addPlot(r"Chap2\Molecules\avg_number.json","2_9_avg_number.pgf","Chap2_Fig2.9",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=2)
+    TP.addPlot(r"Chap2\MoleculeMemory\memory.json","2_10_memory.pgf","Chap2_Fig2.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
     
     TP.generatePlots()
