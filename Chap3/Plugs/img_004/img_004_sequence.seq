@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<ExperimentSequence>
+
+  <Event Name="ScanVariables" Editable="editable" Execute="false"/>
+  <Event Name="InitExperimentPartValues" Editable="fixed" Execute="true"/> 
+  <Event Name="Init" Editable="fixed" Execute="true"/>
+  <Event Name="ExecuteExt3rd" Editable="editable" Execute="false"/>
+  <Event Name="InitSRS" Editable="editable" Execute="false"/> 
+  <Event Name="InitVfg" Editable="editable" Execute="false"/> 
+  <Event Name="InitQComposer" Editable="editable" Execute="true"/>
+  <Event Name="InitDDSBox" Editable="editable" Execute="true"/>
+  <Event Name="InitNewDDS" Editable="editable" Execute="false"/>
+  <Event Name="ExecuteExt" Editable="editable" Execute="true"/>
+  <Event Name="PlugRamp" Editable="editable" Execute="true"/>
+  <Event Name="Microwave" Editable="editable" Execute="false"/>	
+  <Event Name="MicrowaveFreqSweep" Editable="editable" Execute="false"/>
+  <Event Name="MicrowaveSteppedSweep" Editable="editable" Execute="false"/>
+  <Event Name="Microwave2" Editable="editable" Execute="false"/>
+  <Event Name="Microwave2RampUpDown" Editable="editable" Execute="false"/>
+  <Event Name="Microwave3" Editable="editable" Execute="false"/>	
+  <Event Name="WobbleSignal" Execute="false" Editable="editable"/>
+  <Event Name="RotateWaveplates" Execute="false" Editable="editable"/>
+  <Event Name="TomographyRotations" Execute="false" Editable="editable"/>
+  <Event Name="MOTMultipleTransfer" Editable="editable" Execute="true"/>
+  <Event Name="CompressMOT" Editable="editable" Execute="true"/>
+  <Event Name="DoMolassesAndOptPump" Editable="editable" Execute="true"/>
+  <Event Name="LoadMagTrap" Editable="sequential" Execute="true"/>
+  <Event Name="CompressMagTrap" Editable="sequential" Execute="true"/>
+  <Event Name="DoRFCooling" Editable="sequential" Execute="true"/> 
+  <Event Name="TransferToDipoleTrap" Editable="editable" Execute="true"/>
+  <Event Name="SyncToPowerline" Editable="editable" Execute="true"/>
+  <Event Name="HoldInDipoleTrapWithBCompRamp" Execute="true" Editable="editable"/>
+  <Event Name="EITExperiment" Editable="editable" Execute="true"/>
+  <Event Name="LowerMOTAbsorptionPicture" Editable="editable" Execute="true"/>
+  <Event Name="DoubleMOTOff" Editable="fixed" Execute="true"/> 
+  <Event Name="DisableMagTrap" Editable="fixed" Execute="true"/> 
+  <Event Name="DumpADwinBoxTimingList" Editable="fixed" Execute="true"/> 
+  <Event Name="StartADwinBox" Editable="fixed" Execute="true"/>
+  <Event Name="WaitForADwinBox" Editable="fixed" Execute="true"/> 
+  
+
+</ExperimentSequence>
+

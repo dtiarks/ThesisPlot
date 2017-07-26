@@ -1,0 +1,2882 @@
+<?xml version="1.0"?>
+<VariableList>
+  <Variable Type="INT" Name="ShotsPerScanStep" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LoadCycles" Value="2">
+    <ScanSettings ScanStart="6" ScanEnd="16" ScanSteps="14" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFOffset" Value="1.7">
+    <ScanSettings ScanStart="1.65" ScanEnd="1.385" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DetectionBeamAbsorptionDetuning" Value="0">
+    <ScanSettings ScanStart="-18" ScanEnd="18" ScanSteps="36" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DesiredODMax" Value="1.7">
+    <ScanSettings ScanStart="0" ScanEnd="75" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="DoAutoDetuning" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerWarnLoadLevel" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="AbsorptionPicExposureDelay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="15" ScanSteps="12" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="AbsorptionPicExposureTime" Value="0.1">
+    <ScanSettings ScanStart="0.1" ScanEnd="0.5" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="AbsorptionPicCameraPretriggerTime" Value="0.01">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="RepumpAtDetect" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="BothBeamsAtDetect" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="ThetaFramegrabbingDelay" Value="300">
+    <ScanSettings ScanStart="300" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="CameraClientFramegrabbingDelay" Value="280">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="ScanCycles" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTMOTDetuning" Value="23">
+    <ScanSettings ScanStart="28" ScanEnd="30" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTMOTPower" Value="100">
+    <ScanSettings ScanStart="128" ScanEnd="140" ScanSteps="6" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTMolassesDetuning" Value="50">
+    <ScanSettings ScanStart="25" ScanEnd="55" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTMolassesPower" Value="250">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTPumpDepumpDetuning" Value="45">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTPumpDepumpPower" Value="280">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTLoadTime" Value="150">
+    <ScanSettings ScanStart="120" ScanEnd="5100" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTCoolTime" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTDetectionDetuning" Value="20">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTDetectionPower" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTExpansionTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperMOTExposureTime" Value="1.03">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTMOTDetuning" Value="16">
+    <ScanSettings ScanStart="16.5" ScanEnd="25" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTMOTPower" Value="15">
+    <ScanSettings ScanStart="16" ScanEnd="30" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTMolassesDetuning" Value="60">
+    <ScanSettings ScanStart="44" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTMolassesPower" Value="5">
+    <ScanSettings ScanStart="1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTCoolTime" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTCompressDetuning" Value="18">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTCompressPower" Value="100">
+    <ScanSettings ScanStart="70" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTBlastDetuning" Value="48">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTBlastPower" Value="35">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTCompressTime" Value="50">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTDetectionDetuning" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerMOTDetectionPower" Value="35">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperBCompXLevel" Value="1.38">
+    <ScanSettings ScanStart="1.38" ScanEnd="2" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperBCompYLevel" Value="0.121">
+    <ScanSettings ScanStart="1" ScanEnd="5" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="UpperBCompZLevel" Value="-3">
+    <ScanSettings ScanStart="-3" ScanEnd="-2" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerBCompXLevel" Value="5.02">
+    <ScanSettings ScanStart="4.9" ScanEnd="5.2" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerBCompYLevel" Value="-1.965">
+    <ScanSettings ScanStart="-1.9" ScanEnd="-2" ScanSteps="15" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LowerBCompZLevel" Value="-3.01">
+    <ScanSettings ScanStart="-2.95" ScanEnd="-3.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1XDelay" Value="935">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1XTime" Value="5">
+    <ScanSettings ScanStart="5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1XLevel" Value="5.3">
+    <ScanSettings ScanStart="-7.5" ScanEnd="7.5" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1YDelay" Value="910">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1YTime" Value="20">
+    <ScanSettings ScanStart="20" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1YLevel" Value="2.18">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1ZDelay" Value="935">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1ZTime" Value="3">
+    <ScanSettings ScanStart="5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp1ZLevel" Value="-3.4">
+    <ScanSettings ScanStart="-1" ScanEnd="-5" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2XDelay" Value="0">
+    <ScanSettings ScanStart="50" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2XTime" Value="-1">
+    <ScanSettings ScanStart="3" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2XLevel" Value="0">
+    <ScanSettings ScanStart="3.5" ScanEnd="4.1" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2YDelay" Value="30">
+    <ScanSettings ScanStart="30" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2YTime" Value="20">
+    <ScanSettings ScanStart="20" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2YLevel" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="5" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2ZDelay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2ZTime" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BCompRamp2ZLevel" Value="0">
+    <ScanSettings ScanStart="-3.3" ScanEnd="-3" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PumpFieldOffAfterDiptrap" Value="933">
+    <ScanSettings ScanStart="933" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RepumpMOTPower" Value="3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RepumpDetectPower" Value="3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DepumpAtomNumberFlightTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PushDetuning" Value="3.6">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PushDelay" Value="1.8">
+    <ScanSettings ScanStart="1.95" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PushDuration" Value="0.12">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapMasterStartVoltage" Value="2.9">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapMasterStartCurrent" Value="505">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapCompBypassStartCurrent" Value="210">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapAxialBypassStartCurrent" Value="146">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapSerialPinchStartCurrent" Value="580">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapMasterRampCurrent" Value="505">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapMasterRamp1Voltage" Value="4.2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapCompBypassRamp1Current" Value="210">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapAxialBypassRamp1Current" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapMasterRamp2Voltage" Value="8">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapCompBypassRamp2Current" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapAxialBypassRamp2Current" Value="-3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapRampTime1" Value="300">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapRampTime2" Value="300">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapThermalTime" Value="300">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapHoldTimeUncompressed" Value="300">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapHoldTimeCompressed" Value="3100">
+    <ScanSettings ScanStart="3100" ScanEnd="123100" ScanSteps="12" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="MagTrapRampDownTime" Value="300">
+    <ScanSettings ScanStart="300" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PMirror_NDT1_HT" Value="4.6">
+    <ScanSettings ScanStart="4.95" ScanEnd="3.4" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PMirror_NDT1_LR" Value="4.6">
+    <ScanSettings ScanStart="4.4" ScanEnd="3" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PMirror_YAG1_X" Value="6">
+    <ScanSettings ScanStart="5.97" ScanEnd="6.07" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PMirror_YAG1_Y" Value="5.06">
+    <ScanSettings ScanStart="5" ScanEnd="5.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGHoldTime" Value="1000">
+    <ScanSettings ScanStart="1000" ScanEnd="5000" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGOffLevel" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampTime1" Value="100">
+    <ScanSettings ScanStart="100" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGLevel1" Value="3">
+    <ScanSettings ScanStart="1.1" ScanEnd="0" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampTime2" Value="300">
+    <ScanSettings ScanStart="500" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampDelay2" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGLevel2" Value="3">
+    <ScanSettings ScanStart="0.55" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampTime2a" Value="500">
+    <ScanSettings ScanStart="300" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampDelay2a" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGLevel2a" Value="0">
+    <ScanSettings ScanStart="0.2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampTime3" Value="-1">
+    <ScanSettings ScanStart="-1" ScanEnd="20" ScanSteps="15" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampDelay3" Value="0.1">
+    <ScanSettings ScanStart="0.1" ScanEnd="15" ScanSteps="15" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGLevel3" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampTime4" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGRampDelay4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGLevel4" Value="0.8">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RDTIntensity" Value="0.3">
+    <ScanSettings ScanStart="0.4" ScanEnd="0.6" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapOffLevel" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampTime1" Value="100">
+    <ScanSettings ScanStart="700" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapLevel1" Value="4.6">
+    <ScanSettings ScanStart="5.12" ScanEnd="3.7" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampTime2" Value="500">
+    <ScanSettings ScanStart="500" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampDelay2" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapLevel2" Value="4.6">
+    <ScanSettings ScanStart="2.5" ScanEnd="3.7" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampTime2a" Value="-1">
+    <ScanSettings ScanStart="300" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampDelay2a" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapLevel2a" Value="0">
+    <ScanSettings ScanStart="0.98" ScanEnd="0.97" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampTime3" Value="0">
+    <ScanSettings ScanStart="3" ScanEnd="20" ScanSteps="15" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampDelay3" Value="0">
+    <ScanSettings ScanStart="79" ScanEnd="10.3" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapLevel3" Value="0">
+    <ScanSettings ScanStart="0.01" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampTime4" Value="0">
+    <ScanSettings ScanStart="2.5" ScanEnd="2" ScanSteps="17" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapRampDelay4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapLevel4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDipTrapCamDelay" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="EITDelay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="1" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="EITGateTime" Value="1000">
+    <ScanSettings ScanStart="800" ScanEnd="3800" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeBeamDisable" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampTime0" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampTime1" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampTime2" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampTime3" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampDelay0" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampDelay1" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampDelay2" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampDelay3" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauRampTau" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticePlateauRampType" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauLevel0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauLevel1" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauLevel2" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticePlateauLevel3" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTime0" Value="80">
+    <ScanSettings ScanStart="0" ScanEnd="125" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTime1" Value="80">
+    <ScanSettings ScanStart="0" ScanEnd="125" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTime2" Value="80">
+    <ScanSettings ScanStart="0" ScanEnd="125" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTime3" Value="80">
+    <ScanSettings ScanStart="5" ScanEnd="125" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTau0" Value="20">
+    <ScanSettings ScanStart="0" ScanEnd="31.25" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTau1" Value="20">
+    <ScanSettings ScanStart="0" ScanEnd="31.25" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTau2" Value="20">
+    <ScanSettings ScanStart="0" ScanEnd="31.25" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTau3" Value="20">
+    <ScanSettings ScanStart="1.25" ScanEnd="31.25" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTimeOffset0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="15" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTimeOffset1" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTimeOffset2" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampUpTimeOffset3" Value="0">
+    <ScanSettings ScanStart="35" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeRampUpType" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeHoldTime" Value="11">
+    <ScanSettings ScanStart="0.1" ScanEnd="8.1" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeYAGOffDelay" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeFeshLevelDelay" Value="-1">
+    <ScanSettings ScanStart="3" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeFeshLevelRampTime" Value="-1">
+    <ScanSettings ScanStart="1.9" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeFeshLevel" Value="1245">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeFeshLevelHoldTime" Value="7">
+    <ScanSettings ScanStart="0.2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeFeshLevelRampBack" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeBPulseTime" Value="0.01">
+    <ScanSettings ScanStart="2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTime0" Value="7">
+    <ScanSettings ScanStart="0" ScanEnd="20" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTime1" Value="7">
+    <ScanSettings ScanStart="0" ScanEnd="20" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTime2" Value="7">
+    <ScanSettings ScanStart="0" ScanEnd="20" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTime3" Value="7">
+    <ScanSettings ScanStart="0" ScanEnd="20" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTimeOffset0" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTimeOffset1" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTimeOffset2" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampDownTimeOffset3" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeRampDownType" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeRampYSteps" Value="30">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOnLevel0" Value="68">
+    <ScanSettings ScanStart="75" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOnLevel1" Value="75">
+    <ScanSettings ScanStart="75" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOnLevel2" Value="75">
+    <ScanSettings ScanStart="75" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOnLevel3" Value="8.3">
+    <ScanSettings ScanStart="32" ScanEnd="5.4" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOffLevel0" Value="0">
+    <ScanSettings ScanStart="20" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOffLevel1" Value="0">
+    <ScanSettings ScanStart="18" ScanEnd="80" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOffLevel2" Value="0">
+    <ScanSettings ScanStart="18" ScanEnd="100" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeOffLevel3" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="6" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeHoldRampTime" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeHoldRampDelay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeHoldLevelTime" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="LatticeHoldPercentage" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeHoldRampback" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="LatticeHoldBeamDisable" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="HoldInFeshbachFieldRampDelay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="HoldInFeshbachFieldRampTime" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="HoldInFeshbachFieldLevel" Value="400">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="HoldInFeshbachFieldTime" Value="15">
+    <ScanSettings ScanStart="0.15" ScanEnd="10.15" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PictureMaxOD" Value="3">
+    <ScanSettings ScanStart="2" ScanEnd="2" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="PfftPfftRiseDelay" Value="300">
+    <ScanSettings ScanStart="2" ScanEnd="2" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SRSDelayGate_1_DelayA" Value="0">
+    <ScanSettings ScanStart="807.6" ScanEnd="907.6" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SRSDelayGate_1_DelayB" Value="1">
+    <ScanSettings ScanStart="0.001" ScanEnd="0.031" ScanSteps="30" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SRSDelayGate_1_DelayC" Value="935">
+    <ScanSettings ScanStart="0.002" ScanEnd="0.302" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SRSDelayGate_1_DelayD" Value="1300">
+    <ScanSettings ScanStart="0.15" ScanEnd="0.43" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SRSDelayGate_1_TriggerLevel" Value="2.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="SRSDelayGate_1_TriggerSlope" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompSysForceUpdate" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompSysRate" Value="100">
+    <ScanSettings ScanStart="100" ScanEnd="400" ScanSteps="7" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompSysNoOfPulses" Value="16000">
+    <ScanSettings ScanStart="16000" ScanEnd="200001" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompSysTriggerEdge" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompSysGateEdge" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompSysTrigAssignment" Value="TTTTTTTT"/>
+  <Variable Type="DOUBLE" Name="QCompCh1Delay" Value="24.6">
+    <ScanSettings ScanStart="24.6" ScanEnd="524.6" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh1Width" Value="0.97">
+    <ScanSettings ScanStart="1000" ScanEnd="56000" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh1Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh1CycPeriod" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh1OffCyc" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh1Wait" Value="0">
+    <ScanSettings ScanStart="600" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh1Mux" Value="00000010"/>
+  <Variable Type="INT" Name="QCompCh1Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh2Delay" Value="10.3">
+    <ScanSettings ScanStart="10.6" ScanEnd="15.4" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh2Width" Value="4.1">
+    <ScanSettings ScanStart="0.001" ScanEnd="200.001" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh2Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh2CycPeriod" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh2OffCyc" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh2Wait" Value="0">
+    <ScanSettings ScanStart="600" ScanEnd="3600" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh2Mux" Value="00000000"/>
+  <Variable Type="INT" Name="QCompCh2Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh3Delay" Value="9.35">
+    <ScanSettings ScanStart="9.35" ScanEnd="9.55" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh3Width" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="200" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh3Polarity" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh3CycPeriod" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh3OffCyc" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh3Wait" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh3Mux" Value="00000010"/>
+  <Variable Type="INT" Name="QCompCh3Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh4Delay" Value="10.6">
+    <ScanSettings ScanStart="10.6" ScanEnd="25.6" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh4Width" Value="1.5">
+    <ScanSettings ScanStart="10000" ScanEnd="110000" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh4Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh4CycPeriod" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh4OffCyc" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh4Wait" Value="0">
+    <ScanSettings ScanStart="600" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh4Mux" Value="10000000"/>
+  <Variable Type="INT" Name="QCompCh4Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh5Delay" Value="9.45">
+    <ScanSettings ScanStart="9.45" ScanEnd="11.95" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh5Width" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="200" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh5Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh5CycPeriod" Value="2">
+    <ScanSettings ScanStart="2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh5OffCyc" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh5Wait" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh5Mux" Value="00100000"/>
+  <Variable Type="INT" Name="QCompCh5Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh6Delay" Value="10.62">
+    <ScanSettings ScanStart="11" ScanEnd="13" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh6Width" Value="3.3">
+    <ScanSettings ScanStart="1.8" ScanEnd="100" ScanSteps="8" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh6Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh6CycPeriod" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh6OffCyc" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh6Wait" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh6Mux" Value="11000000"/>
+  <Variable Type="INT" Name="QCompCh6Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh7Delay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh7Width" Value="1">
+    <ScanSettings ScanStart="50" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh7Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh7CycPeriod" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh7OffCyc" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh7Wait" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh7Mux" Value="01000000"/>
+  <Variable Type="INT" Name="QCompCh7Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh8Delay" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="QCompCh8Width" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh8Polarity" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh8CycPeriod" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh8OffCyc" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompCh8Wait" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="QCompCh8Mux" Value="10000000"/>
+  <Variable Type="INT" Name="QCompCh8Gatelogic" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RotStagePosition1" Value="1">
+    <ScanSettings ScanStart="70" ScanEnd="80" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RotStagePosition2" Value="-21">
+    <ScanSettings ScanStart="35" ScanEnd="40" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RotStagePosition3" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RotStagePosition4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="FileName" Value="base.bs"/>
+  <Variable Type="INT" Name="Alternate" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="DefaultBase" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="RLBaseFactor" Value="4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="Base0HWP" Value="-2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="Base0QWP" Value="-23">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="Base1HWP" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="Base1QWP" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="Base2HWP" Value="43">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="Base2QWP" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="VFGRamp_StartFrequency" Value="60">
+    <ScanSettings ScanStart="15" ScanEnd="35" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="VFGRamp_EndFrequency" Value="10.05">
+    <ScanSettings ScanStart="0" ScanEnd="-0.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="VFGRamp_Time" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0.015" ScanSteps="30" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveFreqStep" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveTime0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveFrequency0" Value="30">
+    <ScanSettings ScanStart="0" ScanEnd="48" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveTime1" Value="3.2">
+    <ScanSettings ScanStart="3.2" ScanEnd="5.5" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveFrequency1" Value="5">
+    <ScanSettings ScanStart="0" ScanEnd="5" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveTime2" Value="4.7">
+    <ScanSettings ScanStart="4.7" ScanEnd="7.1" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveFrequency2" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0.5" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveTime3" Value="6.45">
+    <ScanSettings ScanStart="5.85" ScanEnd="9" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveFrequency3" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveTime4" Value="6.5">
+    <ScanSettings ScanStart="6" ScanEnd="9.2" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="CoolingCurveFrequency4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachDelay" Value="80">
+    <ScanSettings ScanStart="0" ScanEnd="80" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="YAGOffTimeAfterFeshOn" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulseTimeAfterFeshOn" Value="-1">
+    <ScanSettings ScanStart="796.16" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradCompTimeAfterFeshOn" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="100" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit0" Value="2047">
+    <ScanSettings ScanStart="2047" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime1" Value="100">
+    <ScanSettings ScanStart="100" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit1" Value="1200">
+    <ScanSettings ScanStart="1200" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime2" Value="199.99">
+    <ScanSettings ScanStart="200" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit2" Value="891">
+    <ScanSettings ScanStart="800" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime3" Value="200">
+    <ScanSettings ScanStart="200.01" ScanEnd="915.4" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit3" Value="891">
+    <ScanSettings ScanStart="550" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime4" Value="800">
+    <ScanSettings ScanStart="720" ScanEnd="800" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit4" Value="891">
+    <ScanSettings ScanStart="550" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime5" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit5" Value="0">
+    <ScanSettings ScanStart="802" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="FeshbachRampTime6" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="FeshbachRampBit6" Value="0">
+    <ScanSettings ScanStart="800" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage0" Value="0">
+    <ScanSettings ScanStart="0.1" ScanEnd="1.2" ScanSteps="110" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time1" Value="0">
+    <ScanSettings ScanStart="2" ScanEnd="0" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage1" Value="1">
+    <ScanSettings ScanStart="0.1" ScanEnd="1.2" ScanSteps="110" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time2" Value="1.004">
+    <ScanSettings ScanStart="10" ScanEnd="0" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage2" Value="0">
+    <ScanSettings ScanStart="0.8" ScanEnd="1.12" ScanSteps="50" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time3" Value="0">
+    <ScanSettings ScanStart="4.28" ScanEnd="12.28" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage3" Value="0">
+    <ScanSettings ScanStart="0.8" ScanEnd="1.12" ScanSteps="100" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time4" Value="0">
+    <ScanSettings ScanStart="20" ScanEnd="0" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage4" Value="2.3">
+    <ScanSettings ScanStart="1" ScanEnd="1.8" ScanSteps="4" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time5" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage5" Value="0.01">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time6" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage6" Value="0.01">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time7" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage7" Value="2">
+    <ScanSettings ScanStart="2" ScanEnd="1.2" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Time8" Value="0">
+    <ScanSettings ScanStart="11.1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="BPulse_Voltage8" Value="2">
+    <ScanSettings ScanStart="2" ScanEnd="1.2" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Time0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Voltage0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Time1" Value="0.29">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Voltage1" Value="0">
+    <ScanSettings ScanStart="1" ScanEnd="3.5" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Time2" Value="2.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Voltage2" Value="4.34">
+    <ScanSettings ScanStart="4.35" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Time3" Value="0">
+    <ScanSettings ScanStart="499" ScanEnd="399" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Voltage3" Value="0">
+    <ScanSettings ScanStart="4.3" ScanEnd="3.9" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Time4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Voltage4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Time5" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradY_Voltage5" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Time0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Voltage0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Time1" Value="1.29">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Voltage1" Value="0">
+    <ScanSettings ScanStart="2" ScanEnd="3.8" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Time2" Value="2.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Voltage2" Value="3.85">
+    <ScanSettings ScanStart="4.1" ScanEnd="4.7" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Time3" Value="0">
+    <ScanSettings ScanStart="499" ScanEnd="399" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Voltage3" Value="0">
+    <ScanSettings ScanStart="4.1" ScanEnd="4.7" ScanSteps="25" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Time4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Voltage4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Time5" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="GradZ_Voltage5" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachWarmUpTime" Value="0">
+    <ScanSettings ScanStart="19" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time0" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage0" Value="0">
+    <ScanSettings ScanStart="1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time1" Value="1">
+    <ScanSettings ScanStart="4.8" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage1" Value="0">
+    <ScanSettings ScanStart="2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time2" Value="20">
+    <ScanSettings ScanStart="0.1" ScanEnd="1" ScanSteps="9" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage2" Value="0.15">
+    <ScanSettings ScanStart="0.1" ScanEnd="1" ScanSteps="9" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time3" Value="1300">
+    <ScanSettings ScanStart="819.8" ScanEnd="827.8" ScanSteps="50" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage3" Value="0.15">
+    <ScanSettings ScanStart="0.1" ScanEnd="1" ScanSteps="9" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time4" Value="1330">
+    <ScanSettings ScanStart="863" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage4" Value="0">
+    <ScanSettings ScanStart="1.5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time5" Value="0">
+    <ScanSettings ScanStart="871" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage5" Value="0">
+    <ScanSettings ScanStart="1.5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time6" Value="62">
+    <ScanSettings ScanStart="881" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage6" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time7" Value="63">
+    <ScanSettings ScanStart="881" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage7" Value="0">
+    <ScanSettings ScanStart="0.509" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time8" Value="63.1">
+    <ScanSettings ScanStart="881.01" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage8" Value="0">
+    <ScanSettings ScanStart="2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Time9" Value="0">
+    <ScanSettings ScanStart="883" ScanEnd="0" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SternGerlachPulse_Voltage9" Value="0">
+    <ScanSettings ScanStart="2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="SecondsToWait" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="WobbleVoltage" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="WobbleFrequency_kHz" Value="0.123">
+    <ScanSettings ScanStart="0.02" ScanEnd="0.05" ScanSteps="30" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="WobbleTime" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthiFrequency" Value="13393">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthiSteppedStopFreq" Value="6834.683">
+    <ScanSettings ScanStart="6831" ScanEnd="6834" ScanSteps="50" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthiFreqSpan" Value="20">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthiPower" Value="-15">
+    <ScanSettings ScanStart="-18" ScanEnd="0" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthiSweeptime" Value="500">
+    <ScanSettings ScanStart="0" ScanEnd="-60" ScanSteps="6" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="RFSynthiSteppedPoints" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2StartFreq" Value="-1">
+    <ScanSettings ScanStart="12928.85" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2StopFreq" Value="12931.85">
+    <ScanSettings ScanStart="12932.85" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2TimeUp" Value="1000">
+    <ScanSettings ScanStart="1000" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2DwellUp" Value="1000">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2TimeDown" Value="500">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2StartPower" Value="4.7">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2StopPower" Value="4.7">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2StepNumber" Value="10">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2Power" Value="19">
+    <ScanSettings ScanStart="-18" ScanEnd="11" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi2Frequency" Value="6800">
+    <ScanSettings ScanStart="6731.947" ScanEnd="6731.97" ScanSteps="20" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3Power" Value="-10">
+    <ScanSettings ScanStart="-18" ScanEnd="0" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3Frequency" Value="6831.942">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3Start" Value="-1">
+    <ScanSettings ScanStart="12203" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3Stop" Value="6834">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3Step" Value="0.3">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3Dwell" Value="15">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3StartLevel" Value="-21">
+    <ScanSettings ScanStart="12203" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3StopLevel" Value="-9">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3StepLevel" Value="3">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="RFSynthi3DwellLevel" Value="10">
+    <ScanSettings ScanStart="13390" ScanEnd="6832.1" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="TestVoltage" Value="28.3">
+    <ScanSettings ScanStart="0" ScanEnd="7" ScanSteps="7" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DataDirectory" Value="/data/"/>
+  <Variable Type="STRING" Name="CurrentPicBaseName" Value="Img_"/>
+  <Variable Type="STRING" Name="ADwinBoxTimingListDumpFile" Value="TL_1.lst"/>
+  <Variable Type="STRING" Name="LoadLevelLogFile" Value="LoadLevelLog.txt"/>
+  <Variable Type="INT" Name="UseRandomScans" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="AutoODOffset" Value="3.137">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="CameraToUse" Value="4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="AndorCCDTemperature" Value="20">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="AndorUseEMCCD" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="AndorEMCCDGain" Value="255">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="AndorAlignmentMode" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="SaveImageAfterShot" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="SaveAllImages" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="AndorShutterOpen" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="AndorIntensityCorrection" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="QCompTimeUs" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtCommand" Value="python probe.py"/>
+  <Variable Type="STRING" Name="ExecExtParam0Label" Value="Ampl Gauss"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam0" Value="0.8">
+    <ScanSettings ScanStart="5" ScanEnd="150" ScanSteps="29" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="TestVoltage" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtParam1Label" Value="Ampl DC"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam1" Value="0.2">
+    <ScanSettings ScanStart="-50000" ScanEnd="50000" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtParam2Label" Value="Delay"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam2" Value="10.07">
+    <ScanSettings ScanStart="10.07" ScanEnd="10" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtParam3Label" Value="Width RMS"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam3" Value="0.2">
+    <ScanSettings ScanStart="0.2" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtParam4Label" Value="Scan"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam4" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="9" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="PlugRamp" Value="python plugramparb.py"/>
+  <Variable Type="STRING" Name="ExecExtParam2nd0Label" Value="A"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam2nd0" Value="0.35">
+    <ScanSettings ScanStart="5" ScanEnd="150" ScanSteps="29" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtParam2nd1Label" Value="tau"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam2nd1" Value="500">
+    <ScanSettings ScanStart="-50000" ScanEnd="50000" ScanSteps="40" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="ExecExtParam2nd2Label" Value="t0"/>
+  <Variable Type="DOUBLE" Name="ExecExtParam2nd2" Value="600">
+    <ScanSettings ScanStart="10.07" ScanEnd="10" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="INT" Name="DDSBoxReset" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh1Label" Value="Vicky AOM Sweep"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1FreqStart" Value="190">
+    <ScanSettings ScanStart="195" ScanEnd="169.04" ScanSteps="4" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1FreqStop" Value="200">
+    <ScanSettings ScanStart="188.616" ScanEnd="179.04" ScanSteps="4" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1FreqStepUp_kHz" Value="0.01">
+    <ScanSettings ScanStart="0.05" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1FreqDwellUp_us" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1FreqStepDown_kHz" Value="1000">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1FreqDwellDown_us" Value="0.1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh1Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh2Label" Value="2nd Probe sweep"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2FreqStart" Value="190">
+    <ScanSettings ScanStart="201" ScanEnd="204.75" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2FreqStop" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2FreqDwellUp_us" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2FreqStepDown_kHz" Value="1000">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2FreqDwellDown_us" Value="0.1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh2Ampl" Value="0.5">
+    <ScanSettings ScanStart="0.5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh3Label" Value="Rydberg TiSa AOM"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3FreqStart" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3FreqStop" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3FreqStepUp_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3FreqDwellUp_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3FreqStepDown_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3FreqDwellDown_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh3Ampl" Value="0.95">
+    <ScanSettings ScanStart="0.25" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh4Label" Value="Blaubaer AOM"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4FreqStart" Value="200">
+    <ScanSettings ScanStart="0.4" ScanEnd="0.52" ScanSteps="12" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4FreqStop" Value="-1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4FreqStepUp_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4FreqDwellUp_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4FreqStepDown_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4FreqDwellDown_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh4Ampl" Value="0.8">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh5Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5FreqStart" Value="109">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5FreqStop" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5FreqStepUp_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5FreqDwellUp_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5FreqStepDown_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5FreqDwellDown_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh5Ampl" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh6Label" Value="CombLockMixer"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6FreqStart" Value="59">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="5" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6FreqStop" Value="59">
+    <ScanSettings ScanStart="54.224" ScanEnd="47.06" ScanSteps="4" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6FreqDwellUp_us" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6FreqDwellDown_us" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh6Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh7Label" Value="Vicky AOM Single"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7FreqStart" Value="195">
+    <ScanSettings ScanStart="195" ScanEnd="205" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7FreqStop" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7FreqStepUp_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7FreqDwellUp_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7FreqStepDown_kHz" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7FreqDwellDown_us" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh7Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh8Label" Value="2nd Probe single"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8FreqStart" Value="195">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8FreqStop" Value="195">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh8Ampl" Value="0.9">
+    <ScanSettings ScanStart="0.9" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh9Label" Value="RDT Plug 2 bott"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9FreqStart" Value="111.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9FreqStop" Value="113">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9FreqDwellUp_us" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9FreqStepDown_kHz" Value="1000">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9FreqDwellDown_us" Value="0.1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh9Ampl" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh10Label" Value="RDT Plug 1 top"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10FreqStart" Value="108.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10FreqStop" Value="112">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh10Ampl" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh11Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11FreqStart" Value="192">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11FreqStop" Value="192">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh11Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh12Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12FreqStart" Value="194">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12FreqStop" Value="194">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh12Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh13Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13FreqStart" Value="196">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13FreqStop" Value="196">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh13Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh14Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14FreqStart" Value="198">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14FreqStop" Value="198">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh14Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh15Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15FreqStart" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15FreqStop" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh15Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="DDSBoxCh16Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16FreqStart" Value="197">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16FreqStop" Value="197">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16FreqStepUp_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16FreqDwellUp_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16FreqStepDown_kHz" Value="0.05">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16FreqDwellDown_us" Value="2">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="DDSBoxCh16Ampl" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh1Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh1amp" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh1freq" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh1length" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh1delay" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh2Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh2amp" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh2freq" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh2length" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh2delay" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh3Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh3amp" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh3freq" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh3length" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh3delay" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh4Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh4amp" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh4freq" Value="109">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh4length" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh4delay" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh5Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh5amp" Value="0.8">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh5freq" Value="109">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh5length" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh5delay" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh6Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh6freq0" Value="114.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh6amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh6freq1" Value="114.6">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh6amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh6RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh6DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh7Label" Value="Upper Plug"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh7freq0" Value="101.25">
+    <ScanSettings ScanStart="101.5" ScanEnd="107" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh7amp0" Value="0.73">
+    <ScanSettings ScanStart="0.45" ScanEnd="0.6" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh7freq1" Value="109.6">
+    <ScanSettings ScanStart="109" ScanEnd="111.5" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh7amp1" Value="0.45">
+    <ScanSettings ScanStart="0.3" ScanEnd="0.6" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh7RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh7DropTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh8Label" Value="Lower Plug"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh8freq0" Value="104.25">
+    <ScanSettings ScanStart="104" ScanEnd="114.5" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh8amp0" Value="0.8">
+    <ScanSettings ScanStart="0.5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh8freq1" Value="113.5">
+    <ScanSettings ScanStart="113.5" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh8amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh8RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh8DropTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh9Label" Value="New Probe EOM"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh9freq0" Value="360">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh9amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh9freq1" Value="390">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh9amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh9RiseTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh9DropTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh10Label" Value="Control EOM"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh10freq0" Value="240">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh10amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh10freq1" Value="260">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh10amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh10RiseTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh10DropTime" Value="3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh11Label" Value="NewProbe single"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh11freq0" Value="200">
+    <ScanSettings ScanStart="200" ScanEnd="207" ScanSteps="7" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh11amp0" Value="0.22">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh11freq1" Value="205">
+    <ScanSettings ScanStart="190" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh11amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh11RiseTime" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh11DropTime" Value="0">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh12Label" Value="NewProbe sweep"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh12freq0" Value="195">
+    <ScanSettings ScanStart="195" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh12amp0" Value="0.22">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh12freq1" Value="205">
+    <ScanSettings ScanStart="205" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh12amp1" Value="0.22">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh12RiseTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh12DropTime" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh13Label" Value="GS Control"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh13freq0" Value="80">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh13amp0" Value="0.6">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh13freq1" Value="81">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh13amp1" Value="0.6">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh13RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh13DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh14Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh14freq0" Value="267">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh14amp0" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh14freq1" Value="270">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh14amp1" Value="0.6">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh14RiseTime" Value="200">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh14DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh15Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh15freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh15amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh15freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh15amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh15RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh15DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh16Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh16freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh16amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh16freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh16amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh16RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh16DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh17Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh17freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh17amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh17freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh17amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh17RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh17DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh18Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh18freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh18amp0" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh18freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh18amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh18RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh18DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh19Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh19freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh19amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh19freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh19amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh19RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh19DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh20Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh20freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh20amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh20freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh20amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh20RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh20DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh21Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh21freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh21amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh21freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh21amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh21RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh21DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh22freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh22Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh22amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh22freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh22amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh22RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh22DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh23Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh23freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh23amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh23freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh23amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh23RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh23DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh24Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh24freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh24amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh24freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh24amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh24RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh24DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh25Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh25freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh25amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh25freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh25amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh25RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh25DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh26Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh26freq0" Value="10">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh26amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh26freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh26amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh26RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh26DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh27Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh27freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh27amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh27freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh27amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh27RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh27DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh28Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh28freq0" Value="99.9">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh28amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh28freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh28amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh28RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh28DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh29Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh29freq0" Value="31.8">
+    <ScanSettings ScanStart="31.747" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh29amp0" Value="1">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh29freq1" Value="32.2">
+    <ScanSettings ScanStart="32.147" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh29amp1" Value="1">
+    <ScanSettings ScanStart="1" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh29RiseTime" Value="0.045">
+    <ScanSettings ScanStart="0.01" ScanEnd="0.11" ScanSteps="10" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh29DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="STRING" Name="NewDDSCh30Label" Value="nichts"/>
+  <Variable Type="DOUBLE" Name="NewDDSCh30freq0" Value="100">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh30amp0" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh30freq1" Value="120">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh30amp1" Value="0.5">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh30RiseTime" Value="0.3">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+  <Variable Type="DOUBLE" Name="NewDDSCh30DropTime" Value="0.4">
+    <ScanSettings ScanStart="0" ScanEnd="0" ScanSteps="1" IsScanning="false"/>
+    <VarShiftSettings VarToShiftName="None" VarToShiftOffset="0" VarToShiftFactor="1"/>
+  </Variable>
+</VariableList>
+
