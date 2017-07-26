@@ -1616,7 +1616,7 @@
 \pgftext[x=3.611847in,y=1.577791in,right,]{\sffamily\fontsize{10.000000}{12.000000}\selectfont \(\displaystyle 0,5\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=3.233760in,y=1.062808in,,bottom,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \(\displaystyle \Delta\varphi_{\mathrm{mol}}\)}%
+\pgftext[x=3.233760in,y=1.062808in,,bottom,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \(\displaystyle \phi_{\mathrm{mol}}\) (rad)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgftext[x=3.901111in,y=1.595376in,,]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \textbf{(b)}}%

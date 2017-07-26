@@ -95,7 +95,7 @@ plt.plot(1e6*ts,nuNumerical(ts,pM2,omega))
 h=pd.DataFrame(index=1e6*ts,data=phiNumerical(ts,pM1,omega))
 h2=pd.DataFrame(index=1e6*ts,data=phiNumerical(ts,pM2,omega))
 plot_dict['122']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\Delta\varphi_{\mathrm{mol}}$','xlabel':r'Speicherzeit $(\mu s)$','label':r'$\alpha=\pi/12$','num':'b','ylim':(-1.85,0.8)},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\phi_{\mathrm{mol}}$ (rad)','xlabel':r'Speicherzeit $(\mu s)$','label':r'$\alpha=\pi/12$','num':'b','ylim':(-1.85,0.8)},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':r'$\alpha=\pi/6$'}
 }
 
