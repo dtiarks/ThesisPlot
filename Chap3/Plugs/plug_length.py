@@ -63,12 +63,12 @@ plot_dict['121']={
 h=pd.DataFrame(index=A2nd*profile1[:,0],data=prof1)
 #h2=pd.DataFrame(index=np.arange(0.0,16.0,0.01),data=linear(np.arange(0.0,16.0, 0.01), popt[0], popt[1]))
 plot_dict['122']={
-    'A':{'type':'plot','y':h[0].to_json(),'xlabel':r'z-Koordinate ($\mu m$)','ylabel':r'OD (arb. einh.)','num':'b'}
+    'A':{'type':'plot','y':h[0].to_json(),'xlabel':r'z-Koordinate ($\mu m$)','ylabel':r'OD (arb. einh.)','num':'b','xlim':(0,300)}
                                    
 }
 
-#with io.open('pluglength.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+with io.open('pluglength.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 #plt.tight_layout()
 plt.show()
