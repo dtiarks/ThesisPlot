@@ -427,7 +427,7 @@
 \pgftext[x=2.946326in,y=0.341544in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont \(\displaystyle 4,0\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=1.923301in,y=0.148642in,,top]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \(\displaystyle \Delta_s\) \(\displaystyle (\Gamma_3)\)}%
+\pgftext[x=1.923301in,y=0.148642in,,top]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \(\displaystyle \Delta_s/ \Gamma_3\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%
@@ -1130,7 +1130,7 @@
 \pgftext[x=5.827730in,y=0.341544in,,top]{\sffamily\fontsize{10.000000}{12.000000}\selectfont \(\displaystyle 4,0\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=4.795460in,y=0.148642in,,top]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \(\displaystyle \Delta_s\) \(\displaystyle (\Gamma_3)\)}%
+\pgftext[x=4.795460in,y=0.148642in,,top]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \(\displaystyle \Delta_s/ \Gamma_3\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfsetbuttcap%

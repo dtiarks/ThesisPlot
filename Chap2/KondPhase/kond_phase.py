@@ -122,7 +122,7 @@ plt.xlabel(u'$\Delta_s$ $(\Gamma_e)$')
 h=pd.DataFrame(index=int_array,data=p_array)
 h2=pd.DataFrame(index=int_array,data=p2_array)
 plot_dict['121']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\Delta \\varphi$ (rad)','xlabel':u'$\Delta_s$ $(\Gamma_3)$','margin':(0.1,0.2),'num':'a','xlim':(1.6,4.2),'ylim':(1,4.8),'label':'Num. Integration'},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\Delta \\varphi$ (rad)','xlabel':u'$\Delta_s/ \Gamma_3$','margin':(0.1,0.2),'num':'a','xlim':(1.6,4.2),'ylim':(1,4.8),'label':'Num. Integration'},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':'N\"aherung'},
     'C':{'type':'axh','y':np.pi}
 }
@@ -137,7 +137,7 @@ Omega_c = 1.5
 
 h=pd.DataFrame(index=int_array,data=t_array)
 plot_dict['122']={
-    'A':{'type':'plot','y':h[0].to_json(),'xlabel':u'$\Delta_s$ $(\Gamma_3)$','margin':(0.1,0.1),'num':'b','ylabel':u'Transmission'}
+    'A':{'type':'plot','y':h[0].to_json(),'xlabel':u'$\Delta_s/ \Gamma_3$','margin':(0.1,0.1),'num':'b','ylabel':u'Transmission'}
 #    'C':{'type':'axv','y':0}
 }
 

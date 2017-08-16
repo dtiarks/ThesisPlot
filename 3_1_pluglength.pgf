@@ -140,7 +140,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -151,7 +151,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -162,7 +162,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -173,7 +173,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -1005,7 +1005,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -1016,7 +1016,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -1027,7 +1027,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
@@ -1038,7 +1038,7 @@
 \begin{pgfscope}%
 \pgfsetrectcap%
 \pgfsetmiterjoin%
-\pgfsetlinewidth{2.007500pt}%
+\pgfsetlinewidth{1.003750pt}%
 \definecolor{currentstroke}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{currentstroke}%
 \pgfsetdash{}{0pt}%
