@@ -55,21 +55,30 @@ def nuNumerical(ts,pm,omega):
 def phiNumerical(ts,pm,omega):
     s=np.array([np.angle(moleculeState(tx,pm,omega)[0]+moleculeState(tx,pm,omega)[1]) for tx in ts])
     return s
-    
-#rcl1=classicalRadius(n1)
-#rcl1=orbitalRadius(n1)
-#Vcl1=4/3.*np.pi*np.abs(rcl1)**3
-#
-#rcl2=orbitalRadius(n2)
-#Vcl2=4/3.*np.pi*np.abs(rcl2)**3
-#
-#rBend=(8*np.pi*epsilon_0*hbar**2*(40-rydpy.QuantumDefect(40,0,0.5))**2)/(1*ec**2*m_e)
-#print rBend/a0
 
+def alphaMu(rat):
+    alpha=np.sqrt(1/(1+(1/rat)**2))
+    beta=np.sqrt(1-alpha**2)
+    return alpha,beta
+
+def etaStephan(eps, alpha, mu):
+    return alpha**2+mu**2+2*alpha*mu*np.cos(2*eps)
+    
+def phiStephan(eps, alpha, mu):
+    phi=np.angle(alpha*np.exp(-1j*eps)+mu*np.exp(1j*eps))
+    phi=np.arctan((mu-alpha)/(mu+alpha)*np.tan(eps))-np.pi*np.sign(mu-alpha)*np.mod(eps/np.pi+0.5,1)
+    return phi
+    
 pM1=np.pi/12.
 pM2=np.pi/6.
 omega=2*np.pi*220e3
-ts=np.linspace(0,10e-6,100)
+ts=np.linspace(0,10e-6,1000)
+
+rat1=0.2
+rat2=0.9
+alpha,mu=alphaMu(rat1)
+print etaStephan(1.,alpha,mu)
+
 #nu=np.abs(np.outer(moleculeState(np.zeros_like(ts),pM,0),moleculeState(ts,pM,omega)))**2
 
 plot_dict={}
@@ -78,31 +87,31 @@ plot_dict={}
 f=plt.figure()
 
 
-h=pd.DataFrame(index=1e6*ts,data=nuNumerical(ts,pM1,omega))
-h2=pd.DataFrame(index=1e6*ts,data=nuNumerical(ts,pM2,omega))
+h=pd.DataFrame(index=omega*ts,data=etaStephan(omega*ts,alpha,mu))
+h2=pd.DataFrame(index=omega*ts,data=etaStephan(omega*ts,*alphaMu(rat2)))
 plot_dict['121']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\eta_L(t)$','xlabel':r'Speicherzeit $(\mu s)$','ylim':(0,1.2),'num':'a','label':r'$\alpha=\pi/12$'},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\eta_L(t)$','xlabel':r'$\omega_B t_D$ (rad)','ylim':(0,1.2),'num':'a','label':r'$\alpha=\pi/12$'},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':r'$\alpha=\pi/6$'}
 }
 
 plt.subplot(121)
 plt.ylabel(u'$\Delta \phi$')
-plt.plot(1e6*ts,nuNumerical(ts,pM1,omega))
-plt.plot(1e6*ts,nuNumerical(ts,pM2,omega))
+plt.plot(omega*ts,etaStephan(omega*ts,alpha,mu))
+plt.plot(omega*ts,etaStephan(omega*ts,*alphaMu(rat2)))
 #plt.plot(1e6*ts,nuMolecule(ts,pM,omega))
 #plt.axhline(1)
 
-h=pd.DataFrame(index=1e6*ts,data=phiNumerical(ts,pM1,omega))
-h2=pd.DataFrame(index=1e6*ts,data=phiNumerical(ts,pM2,omega))
+h=pd.DataFrame(index=omega*ts,data=phiStephan(omega*ts,*alphaMu(rat1))+0.5*np.pi)
+h2=pd.DataFrame(index=omega*ts,data=phiStephan(omega*ts,*alphaMu(rat2))+0.5*np.pi)
 plot_dict['122']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\phi_{\mathrm{mol}}$ (rad)','xlabel':r'Speicherzeit $(\mu s)$','label':r'$\alpha=\pi/12$','num':'b','ylim':(-1.85,0.8)},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\phi_{\mathrm{mol}}$ (rad)','xlabel':r'$\omega_B t_D$ (rad)','label':r'$\alpha=\pi/12$','num':'b','ylim':(-1.85,0.8)},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':r'$\alpha=\pi/6$'}
 }
 
 plt.subplot(122)
 plt.ylabel(u'$\Delta \phi$')
-plt.plot(1e6*ts,phiNumerical(ts,pM1,omega))
-plt.plot(1e6*ts,phiNumerical(ts,pM2,omega))
+plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat1))+0.5*np.pi)
+plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat2))+0.5*np.pi)
 
 
 with io.open('memory.json', 'w+') as f:

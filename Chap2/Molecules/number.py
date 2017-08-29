@@ -49,7 +49,7 @@ Vcl1=4/3.*np.pi*np.abs(rcl1)**3
 rcl2=orbitalRadius(n2)
 Vcl2=4/3.*np.pi*np.abs(rcl2)**3
 
-rBend=(8*np.pi*epsilon_0*hbar**2*(40-rydpy.QuantumDefect(40,0,0.5))**2)/(1*ec**2*m_e)
+rBend=(8*np.pi*epsilon_0*hbar**2*(n1-rydpy.QuantumDefect(n1,0,0.5))**2)/(1*ec**2*m_e)
 print rBend/a0
 
 
@@ -98,8 +98,8 @@ plot_dict['111']={
 
 
 
-with io.open('avg_number.json', 'w+') as f:
-  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+#with io.open('avg_number.json', 'w+') as f:
+#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
