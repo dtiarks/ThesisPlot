@@ -57,7 +57,7 @@ def phiNumerical(ts,pm,omega):
     return s
 
 def alphaMu(rat):
-    alpha=np.sqrt(1/(1+(1/rat)**2))
+    alpha=np.sqrt(1/(1+(rat)**2))
     beta=np.sqrt(1-alpha**2)
     return alpha,beta
 
@@ -66,7 +66,7 @@ def etaStephan(eps, alpha, mu):
     
 def phiStephan(eps, alpha, mu):
     phi=np.angle(alpha*np.exp(-1j*eps)+mu*np.exp(1j*eps))
-    phi=np.arctan((mu-alpha)/(mu+alpha)*np.tan(eps))-np.pi*np.sign(mu-alpha)*np.mod(eps/np.pi+0.5,1)
+    phi=np.arctan(((mu-alpha)/(mu+alpha))*np.tan(eps))+np.pi*np.sign(mu-alpha)*np.mod(eps/np.pi+0.5,1)
     return phi
     
 pM1=np.pi/12.
@@ -114,8 +114,8 @@ plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat1))+0.5*np.pi)
 plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat2))+0.5*np.pi)
 
 
-with io.open('memory.json', 'w+') as f:
-  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+#with io.open('memory.json', 'w+') as f:
+#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
