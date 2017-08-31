@@ -57,8 +57,8 @@ def phiNumerical(ts,pm,omega):
     return s
 
 def alphaMu(rat):
-    alpha=np.sqrt(1/(1+(rat)**2))
-    beta=np.sqrt(1-alpha**2)
+    alpha=1/(1+(rat)**2)
+    beta=1/(1+(1/rat)**2)
     return alpha,beta
 
 def etaStephan(eps, alpha, mu):
@@ -66,7 +66,7 @@ def etaStephan(eps, alpha, mu):
     
 def phiStephan(eps, alpha, mu):
     phi=np.angle(alpha*np.exp(-1j*eps)+mu*np.exp(1j*eps))
-    phi=np.arctan(((mu-alpha)/(mu+alpha))*np.tan(eps))+np.pi*np.sign(mu-alpha)*np.mod(eps/np.pi+0.5,1)
+    phi=np.arctan(((mu-alpha)/(mu+alpha))*np.tan(eps))-np.pi*np.sign(mu-alpha)*np.mod(eps/np.pi+0.5,1)
     return phi
     
 pM1=np.pi/12.
@@ -75,7 +75,7 @@ omega=2*np.pi*220e3
 ts=np.linspace(0,10e-6,1000)
 
 rat1=0.2
-rat2=0.9
+rat2=0.5
 alpha,mu=alphaMu(rat1)
 print etaStephan(1.,alpha,mu)
 
@@ -90,8 +90,8 @@ f=plt.figure()
 h=pd.DataFrame(index=omega*ts,data=etaStephan(omega*ts,alpha,mu))
 h2=pd.DataFrame(index=omega*ts,data=etaStephan(omega*ts,*alphaMu(rat2)))
 plot_dict['121']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\eta_L(t)$','xlabel':r'$\omega_B t_D$ (rad)','ylim':(0,1.2),'num':'a','label':r'$\alpha=\pi/12$'},                
-    'B':{'type':'plot','y':h2[0].to_json(),'label':r'$\alpha=\pi/6$'}
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\eta_L(t)$','xlabel':r'$\omega_B t_D$ (rad)','ylim':(0,1.2),'num':'a','label':r'$r=0.2$'},                
+    'B':{'type':'plot','y':h2[0].to_json(),'label':r'$r=0.5$'}
 }
 
 plt.subplot(121)
@@ -101,21 +101,21 @@ plt.plot(omega*ts,etaStephan(omega*ts,*alphaMu(rat2)))
 #plt.plot(1e6*ts,nuMolecule(ts,pM,omega))
 #plt.axhline(1)
 
-h=pd.DataFrame(index=omega*ts,data=phiStephan(omega*ts,*alphaMu(rat1))+0.5*np.pi)
-h2=pd.DataFrame(index=omega*ts,data=phiStephan(omega*ts,*alphaMu(rat2))+0.5*np.pi)
+h=pd.DataFrame(index=omega*ts,data=phiStephan(omega*ts,*alphaMu(rat1))-0.5*np.pi)
+h2=pd.DataFrame(index=omega*ts,data=phiStephan(omega*ts,*alphaMu(rat2))-0.5*np.pi)
 plot_dict['122']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\phi_{\mathrm{mol}}$ (rad)','xlabel':r'$\omega_B t_D$ (rad)','label':r'$\alpha=\pi/12$','num':'b','ylim':(-1.85,0.8)},                
-    'B':{'type':'plot','y':h2[0].to_json(),'label':r'$\alpha=\pi/6$'}
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':r'$\phi_{\mathrm{mol}}$ (rad)','xlabel':r'$\omega_B t_D$ (rad)','num':'b','ylim':(-0.5,0.5)},                
+    'B':{'type':'plot','y':h2[0].to_json(),}
 }
 
 plt.subplot(122)
 plt.ylabel(u'$\Delta \phi$')
-plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat1))+0.5*np.pi)
-plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat2))+0.5*np.pi)
+plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat1))-0.5*np.pi)
+plt.plot(omega*ts,phiStephan(omega*ts,*alphaMu(rat2))-0.5*np.pi)
 
 
-#with io.open('memory.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+with io.open('memory.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
