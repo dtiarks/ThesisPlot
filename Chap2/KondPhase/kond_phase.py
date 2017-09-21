@@ -61,8 +61,8 @@ def cond_trans(d_c,om_c,d_o):
     t_1=omega_s/c *  chi_0 *integrate.quad(im_chi_vdw, -L/2, L/2)[0]
     
     
-#    return intersection,np.exp(-t_1)
-    return intersection,t_1
+    return intersection,np.exp(-t_1)
+#    return intersection,t_1
     
     
 # the parameters, all in units of Gamma_3
@@ -75,7 +75,7 @@ p_array=[]
 p2_array=[]
 t_array=[]
 t_c_array=[]
-d_cs=np.linspace(1.6,5.,40)
+d_cs=np.linspace(1.0,5.,40)
 for d in d_cs:
 #    i,p2=cond_phase(d,Omega_c,1)
     i,p=cond_phase(d,Omega_c,0.)
@@ -94,8 +94,8 @@ for d in d_cs:
     p2_array.append(p2)
     
     chi = susceptibility(i, d, gamma_21, Omega_c)
-#    trans = np.exp(- omega_s/c * L * chi_0* np.imag(chi))
-    trans = omega_s/c * L * chi_0* np.imag(chi)
+    trans = np.exp(- omega_s/c * L * chi_0* np.imag(chi))
+#    trans = omega_s/c * L * chi_0* np.imag(chi)
     t_array.append(trans)
     
     _,t_c=cond_trans(d,Omega_c,0.)
@@ -126,6 +126,8 @@ f=plt.figure()
 #    'C':{'type':'axv','y':0}
 #}
 
+int_array=-1.*np.array(int_array)
+
 plt.subplot(121)
 plt.plot(int_array , p_array, ls='-',lw=1.5,c='r')
 plt.plot(int_array , p2_array, ls='-',lw=1.5,c='b')
@@ -140,7 +142,7 @@ plt.xlabel(u'$\Delta_s$ $(\Gamma_e)$')
 h=pd.DataFrame(index=int_array,data=p_array)
 h2=pd.DataFrame(index=int_array,data=p2_array)
 plot_dict['121']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\Delta \\varphi$ (rad)','xlabel':u'$\Delta_s/ \Gamma_3$','margin':(0.1,0.2),'num':'a','xlim':(1.6,4.2),'ylim':(1,4.8),'label':'Num. Integration'},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\Delta \\varphi$ (rad)','xlabel':u'$\Delta_s/ \Gamma_3$','margin':(0.1,0.2),'num':'a','xlim':(-4.2,-1.6),'ylim':(1,4.8),'label':'Num. Integration'},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':'N\"aherung'},
     'C':{'type':'axh','y':np.pi}
 }
@@ -156,7 +158,7 @@ Omega_c = 1.5
 h2=pd.DataFrame(index=int_array,data=t_array)
 h=pd.DataFrame(index=int_array,data=t_c_array)
 plot_dict['122']={
-    'A':{'type':'plot','y':h[0].to_json(),'xlabel':u'$\Delta_s/ \Gamma_3$','ylim':(0.00,0.9),'num':'b','ylabel':u'Transmission'},
+    'A':{'type':'plot','y':h[0].to_json(),'xlabel':u'$\Delta_s/ \Gamma_3$','ylim':(0.00,0.9),'xlim':(-4.2,-1.6),'num':'b','ylabel':u'Transmission'},
     'B':{'type':'plot','y':h2[0].to_json()},
     'C':{'type':'axh','y':-1}
 }
@@ -174,8 +176,8 @@ plt.plot(int_array , t_c_array, ls='-',lw=1.5,c='b')
 
 
 
-#with io.open('cond_phase.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+with io.open('cond_phase.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
