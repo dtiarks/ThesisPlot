@@ -81,7 +81,7 @@ f=plt.figure()
 h=pd.DataFrame(index=1e6*zs,data=Uplug(zs)/U0)
 h2=pd.DataFrame(index=1e6*zs[100:400],data=Pre(zs[100:400],T)/Pre(0,T))
 plot_dict['111']={
-    'A':{'type':'plot','y':h[0].to_json(),'xlabel':r'Ort $(\mu m)$','ylim':(0,1.1),'label':r'$U_p(z)/U_0$'},                
+    'A':{'type':'plot','y':h[0].to_json(),'xlabel':r'Ort $(\mu m)$','ylim':(0,1.1),'label':r'$U_p(z)/U_0$','ylabel':r'$n_a(z)/n_0$, $U_p(z)/U_{0,p}$'},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':r'Dichte $n_p(z)/n0$'}
 }
 
