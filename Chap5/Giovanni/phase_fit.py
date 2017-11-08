@@ -92,7 +92,7 @@ print ErrOff
 fig.set_size_inches(7,4.5)
 plt.show()
 #fig.set_size_inches(7,12)
-plt.savefig('timetrace_d0_1.pdf')
+# plt.savefig('timetrace_d0_1.pdf')
 
 
 datOn=histo[2300:2750,1]
