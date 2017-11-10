@@ -176,7 +176,7 @@ h2=pd.DataFrame(index=fT2-delay,data=fitFunc(fT2,*popt1))
 plot_dict['121']={
     'A':{'type':'scatter','y':h[0].to_json(),'num':'a','xlabel':u'Zeit ($\mu s$)',
          'xlim':(fitParameters["xscale"][0]-delay,fitParameters["xscale"][1]-delay),'ylim':(0,0.05),'label':'Daten'},
-    'B':{'type':'plot','y':h2[0].to_json(),'label':'Kurvenanpassung','ylabel':u'Intensit\"at'},
+    'B':{'type':'plot','y':h2[0].to_json(),'label':'Kurvenanpassung','ylabel':u'Intensit\"at (Photonen/50 ns)'},
     'C':{'type':'axv','y':1.5878}
 }
 

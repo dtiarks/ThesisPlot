@@ -51,25 +51,25 @@ fitT=np.linspace(hT[0],hT[-1],1e3)
 
 #ax0.plot(np.asarray(hT)-12.5,hCrop1*photonsPerClick,'ro',label="$\Omega_c=$???")
 #ax0.plot(np.asarray(fitT)-12.5,fitFunc(fitT,*popt0)*photonsPerClick,'r-')
-ax0.plot(np.asarray(hT)-12.5,hCrop2*photonsPerClick,'bo',label="$\Omega_c=$0")
-ax0.plot(np.asarray(fitT)-12.5,fitFunc(fitT,*popt1)*photonsPerClick,'b-')
-ax0.plot(np.asarray(hT)-12.5,hCropref*photonsPerClick,'go',label="$\Omega_c=$0")
-ax0.plot(np.asarray(fitT)-12.5,fitFunc(fitT,*poptR)*photonsPerClick,'g-')
+# ax0.plot(np.asarray(hT)-12.5,hCrop2*photonsPerClick,'bo',label="$\Omega_c=$0")
+# ax0.plot(np.asarray(fitT)-12.5,fitFunc(fitT,*popt1)*photonsPerClick,'b-')
+# ax0.plot(np.asarray(hT)-12.5,hCropref*photonsPerClick,'go',label="$\Omega_c=$0")
+# ax0.plot(np.asarray(fitT)-12.5,fitFunc(fitT,*poptR)*photonsPerClick,'g-')
 
-ax0.set_xlabel("Time ($\mu s$)")
-ax0.set_ylabel("Number of transmitted photons in 50ns")
-print "Phase of : without atoms, without control, with control "+str([poptR[1],popt1[1],popt0[1]])
-print "errors: without atoms, without control, with control "+str([np.sqrt(pcovR[1][1]),np.sqrt(pcov1[1][1]),np.sqrt(pcov0[1][1])])
-dpOff = (popt1[1]-poptR[1])
-dpOn = (popt0[1]-poptR[1])
-print dpOff,dpOn, dpOff-dpOn
-ErrOff=np.sqrt(pcov1[1][1]+pcovR[1][1])
-print ErrOff
-#leg = ax0.legend(fancybox=True, framealpha=0.0,loc=1)
+# ax0.set_xlabel("Time ($\mu s$)")
+# ax0.set_ylabel("Number of transmitted photons in 50ns")
+# print "Phase of : without atoms, without control, with control "+str([poptR[1],popt1[1],popt0[1]])
+# print "errors: without atoms, without control, with control "+str([np.sqrt(pcovR[1][1]),np.sqrt(pcov1[1][1]),np.sqrt(pcov0[1][1])])
+# dpOff = (popt1[1]-poptR[1])
+# dpOn = (popt0[1]-poptR[1])
+# print dpOff,dpOn, dpOff-dpOn
+# ErrOff=np.sqrt(pcov1[1][1]+pcovR[1][1])
+# print ErrOff
+# #leg = ax0.legend(fancybox=True, framealpha=0.0,loc=1)
 
-#ax0.set_title(("Amplitude modulation: $|r>=68 s_{1/2}; \phi=%.3f \pi$")%dp)
-#ax0.legend()
-#ax0.grid(True)
+# #ax0.set_title(("Amplitude modulation: $|r>=68 s_{1/2}; \phi=%.3f \pi$")%dp)
+# #ax0.legend()
+# #ax0.grid(True)
 
 
 

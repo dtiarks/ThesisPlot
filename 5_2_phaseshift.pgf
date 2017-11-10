@@ -9983,7 +9983,7 @@
 \pgftext[x=0.731846in,y=1.786946in,right,]{\sffamily\fontsize{10.000000}{12.000000}\selectfont \(\displaystyle 0,05\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.392340in,y=1.092022in,,bottom,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont Intensit"at}%
+\pgftext[x=0.392340in,y=1.092022in,,bottom,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont Intensit"at (Photonen/50 ns)}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgftext[x=1.009306in,y=1.647961in,,]{\sffamily\fontsize{11.000000}{13.200000}\selectfont \textbf{(a)}}%
