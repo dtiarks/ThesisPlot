@@ -49,7 +49,8 @@ def resadjust(ax, xres=None, yres=None):
 
 fitParameters={
   "binningHisto":0.05e-7,
-  "histoInterval":(11.25,11.75),
+#  "histoInterval":(11.25,11.75),
+  "histoInterval":(11.65,11.75),
   "refScale":1/0.0002,
   "initRef":[25, 2,25],
   "initPost":[25, 2,25],
@@ -193,8 +194,10 @@ plot_dict['122']={
 
 plt.show()
 
-with io.open('sideband_postselected_phaseshift.json', 'w+') as f:
-  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+print("Controlled phase shift: %.3f"%(popt1[1]-popt0[1]))
+
+#with io.open('sideband_postselected_phaseshift.json', 'w+') as f:
+#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 

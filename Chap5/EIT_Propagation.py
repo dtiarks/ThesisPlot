@@ -22,10 +22,10 @@ import io
 
 hbar = 6.626070040e-34/(2 * np.pi) # Js, Planck constant, CODATA 2014
 d = 2.534e-29 # Cm, dipole matrix element (D. A. Steck) of the 87Rb D2 Cycling Transition
-Gamma_e = 2*np.pi * 6.065e6 # decay rate (D. A. Steck)
+Gamma_e = 2*np.pi * 5.746e6 # decay rate (D. A. Steck)
 epsilon_0 = 8.854187817e-12 # dielectric constant, CODATA 2014
-L = 60e-6 # medium length in m
-omega_s = 2*np.pi * 384.23e12 # rad/s, transition frequency
+L = 48e-6 # medium length in m
+omega_s = 2*np.pi * 377.23e12 # rad/s, transition frequency
 c = 299792458 # m/s, speed of light CODATA 2014
 
 # SIMULATION INPUT
@@ -36,8 +36,8 @@ sim_pars = {
                 "N" : 2**18, # number of points to include. determines the time resolution. powers of two yield best FFT efficiency
 
                 # experiment parameters
-                "rho_peak" : 2.2e12/1e-6, # peak density in m^-3 (cm^-3/centi^-3)
-                "L" : 70e-6, # medium length in m
+                "rho_peak" : 0.5*3.1e12/1e-6, # peak density in m^-3 (cm^-3/centi^-3)
+                "L" : 48e-6, # medium length in m
           
                 "gs_EIT" : {
                             "Delta_c" : 0, #2*np.pi * 100e3, # detuning of the coupling laser
@@ -47,16 +47,16 @@ sim_pars = {
                         },   
                 "ryd_EIT" : {
                             #"Delta_c" : -1.81*Gamma_e, #-50e3, # detuning of the coupling laser
-                            "Delta_c" : -1.83*Gamma_e, #-50e3, # detuning of the coupling laser
-                            "gamma_21" : 2*np.pi* 100e3, #500e3, # dephasing rate (rad/s)
-                            "Omega_c" : 1.8*Gamma_e,#10e6, # coupling Rabi-Frequency (rad/s)
+                            "Delta_c" : -1.4*Gamma_e, #-50e3, # detuning of the coupling laser
+                            "gamma_21" : 2*np.pi* 1100e3, #500e3, # dephasing rate (rad/s)
+                            "Omega_c" : 0.8*Gamma_e,#10e6, # coupling Rabi-Frequency (rad/s)
                             "ladder" : False,
                          },
                          
                 # input pulse
                 "tRMS" : 0.01e-6, # RMS width of the input gaussian
-                "tW" : 3e-6, # width of the rectangular input pulse
-                "Delta_s0" : -2*Gamma_e, # detuning of the signal laser from resonance (rad/s)
+                "tW" : 0.6e-6, # width of the rectangular input pulse
+                "Delta_s0" : -1.4*Gamma_e, # detuning of the signal laser from resonance (rad/s)
                 "S3_in" : -0.75, # Input S3 parameter, translates to (p_R - p_L) / (p_R + p_L)
                 "in_func" :  '''lambda times, **kwargs: np.sqrt(  PHI((kwargs["tL"]/2 - kwargs["tW"]/2 - times)/(-0.0005e-6) ) * PHI((kwargs["tL"]/2 + kwargs["tW"]/2 - times)/0.0005e-6) ) * np.exp(-1j * kwargs["Delta_s0"] * times)'''#'''lambda times, **kwargs: np.sqrt( np.exp(- 0.5 * (times - kwargs["tL"]/2)**2/(kwargs["tRMS"])**2) * PHI((kwargs["tL"]/2 - times)/0.015e-6) ) * np.exp(-1j * kwargs["Delta_s0"] * times)'''
                 # the half-gaussian envelope of the pulse as in the experiment control code. using an error function (PHI) to smoothen
@@ -114,6 +114,8 @@ def simulate_propagation(sim_pars):
     chi_0 = 2*rho_peak*d**2 / (epsilon_0*hbar*Gamma_e) # prefactor of the susceptibility for the Cycling transition |2,2> -> |2',3'>
     chi_gs = lambda d:  0*chi_0*Gamma_e*susceptibility(d, **gs_EIT)/6 # transition strength is 1/6
     chi_ryd = lambda d:  1*chi_0*Gamma_e*susceptibility(d, **ryd_EIT) 
+    
+    print "%f"%(chi_0)
     
     spec_at_L_gs = propagateSpectrum(deltas, spectrum, L, chi_gs) 
     spec_at_L_ryd = propagateSpectrum(deltas, spectrum, L, chi_ryd)
