@@ -80,9 +80,11 @@ ds_off = 2*np.pi*0.0*10**6/Gamma_e
 
 Omega_c = 2*np.pi*10.4*10**6/Gamma_e
 
-#Ga=Omega_c**2/(4*Delta_s)
+#Ga=Omega_c**2/(4*np.abs(Delta_s))
 Ga=np.true_divide(Omega_c**2*np.abs(Delta_s),1+np.sqrt((4*np.abs(Delta_s)**2+1)**2-4*np.abs(Delta_s)**2*1))
 R_b=1.0*(C6/(hbar*Gamma_e)/Ga)**(1./6.)
+
+print("Blockade Radius: %.2f um"%(R_b*1e6))
 
 od_new = lambda x: omega_s/c*chi_0*L*np.imag(susceptibility(x-ds_off, Delta_c , gamma_21, Omega_c))
 ph_new = lambda x: 0.5*omega_s/c*chi_0*L*np.real(susceptibility(x-ds_off, Delta_c , gamma_21, Omega_c))-0.5*omega_s/c*chi_0*L/15.*np.real(susceptibility(x, Delta_c , gamma_21, Omega_c))
