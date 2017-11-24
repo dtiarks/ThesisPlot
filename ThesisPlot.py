@@ -6,8 +6,8 @@ import pandas as pd
 import ast
 import os
 # Set to German locale to get comma decimal separater
-#locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
-locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
+locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
+#locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
 import matplotlib as mpl
 mpl.use('pgf')
 
@@ -42,7 +42,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "ytick.labelsize": 10,
     "figure.figsize": [1*5.67, 1.76],   # default fig size of 0.9 textwidth
     "errorbar.capsize": 0,             # set standard
-#    "markers.fillstyle": 'none',
+    "markers.fillstyle": 'none',
     "lines.markersize": 1,
     "lines.linewidth": 1.5,
     "legend.fancybox": True,
@@ -67,6 +67,7 @@ class ThesisPlot(object):
     colors=['b','r','g','k','y']
     linestyles=['-','-','-','-','-','-']
     linewidths=[1.5,1.5,1.5,1.5,1.5,1.5]
+    markers=['o','o','o','o','o']
 
     def __init__(self):
         self.dicts=dict()
@@ -93,8 +94,14 @@ class ThesisPlot(object):
                 tl=self.dicts[d]['tight']
                 if tl:
                     self.f.tight_layout(w_pad=self.dicts[d]['wpad'],h_pad=self.dicts[d]['hpad'])
+                    
+                ms=self.dicts[d]['markers']
+                print "markers: %s"%ms
+                if ms==None:
+                    ms=self.markers
                 
-                for (c,l,lw,sp) in zip(cs[:len(self.dicts[d]['json'][sp_ax])],ls[:len(self.dicts[d]['json'][sp_ax])],lws[:len(self.dicts[d]['json'][sp_ax])],self.dicts[d]['json'][sp_ax]):
+                
+                for (c,l,lw,sp,m) in zip(cs[:len(self.dicts[d]['json'][sp_ax])],ls[:len(self.dicts[d]['json'][sp_ax])],lws[:len(self.dicts[d]['json'][sp_ax])],self.dicts[d]['json'][sp_ax],ms[:len(self.dicts[d]['json'][sp_ax])]):
                     if self.dicts[d]['json'][sp_ax][sp]['type']=='errorbar':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -133,8 +140,11 @@ class ThesisPlot(object):
                             ax.set_ylim(*yl)
                         except:
                             print "No y-limit found"
+                            
+                        print "marker: %s"%m
+                        m='o'
                         
-                        ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw)
+                        ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw,marker=m,markersize='5')
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='plot':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -288,7 +298,7 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None):
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -296,6 +306,7 @@ class ThesisPlot(object):
                                   'linestyle':ls,
                                   'color':cs,
                                   'linewidths':lw,
+                                  'markers':m,
                                   'tight':tl,
                                   'wpad':w_pad,
                                   'hpad':h_pad,
@@ -329,7 +340,11 @@ if __name__=='__main__':
 #    TP.addPlot(r"Chap3\IF\eif_lock.json","3_10_eif_lock.pgf","Chap3_Fig3.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=2.3,tl=True,lloc=4)
 #    TP.addPlot(r"Chap3\Laser\cavity_characterization.json","3_5_cavity.pgf","Chap3_Fig3.5",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
 #    TP.addPlot(r"Chap5\sideband_postselected_phaseshift.json","5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
-    TP.addPlot(os.path.join("Chap5","sideband_postselected_phaseshift.json"),"5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','k','r'],legend=True,h_pad=0,w_pad=0.,lloc=1)
+#    TP.addPlot(os.path.join("Chap5","sideband_postselected_phaseshift.json"),"5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','k','r'],legend=True,h_pad=0,w_pad=0.,lloc=1)
 #    TP.addPlot(os.path.join("Chap5","spectrum.json"),"5_1_spectrum.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r','r','b'],legend=True,h_pad=0,w_pad=2.,lloc=1,tl=True)
+#    TP.addPlot(os.path.join("Chap5","pol_spectra.json"),"5_4_spectra.pgf","Chap5_Fig5.4",size=1.0,cs=['b','b','r','k','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-','-',''],m=['o','','o','',''])
+#    TP.addPlot(os.path.join("Chap5","cond_phase_vs_density.json"),"5_7_phase.pgf","Chap5_Fig5.7",size=1.0,cs=['b','b','r','r'],legend=False,tl=False,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
+#    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
+    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
     
     TP.generatePlots()
