@@ -17,7 +17,7 @@ hbar = 6.626070040e-34/(2 * np.pi) # Js, Planck constant, CODATA 2014
 Eh=const.physical_constants["Hartree energy"][0]
 me=const.m_e
 u=const.physical_constants["atomic mass constant"][0]
-m=87*u
+m=43.5*u
 
 
 

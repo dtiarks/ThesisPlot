@@ -79,8 +79,8 @@ plt.plot(txs, trilobite_decay(txs,*popt1))
 
 
 
-with io.open('storage_retrieval.json', 'w+') as f:
-  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+#with io.open('storage_retrieval.json', 'w+') as f:
+#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()

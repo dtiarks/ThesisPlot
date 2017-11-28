@@ -86,8 +86,8 @@ plt.errorbar(polar[:,0], polar[:,1], yerr=polar[:,2], ls="", marker='o',lw=1.5,c
 plt.xlim((11.,14.5))
 
 
-with io.open('propagation.json', 'w+') as f:
-  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+#with io.open('propagation.json', 'w+') as f:
+#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
