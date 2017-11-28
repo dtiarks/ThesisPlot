@@ -56,7 +56,7 @@ h2=pd.DataFrame(index=txs,data=trilobite_decay(txs,*popt1))
 
 plot_dict['111']={
     'A':{'type':'errorbar','y':h[0].to_json(),'yerr':h_err[0].to_json(),'ylabel':u'Effizienz','xlabel':u'Speicherzeit ($\mu s$)','xlim':(0.,12.),'ylim':(0,0.25),'label':'Daten'},
-    'B':{'type':'plot','y':h[0].to_json()}
+    'B':{'type':'plot','y':h2[0].to_json()}
 }
 
 plt.subplot(111)
@@ -79,8 +79,8 @@ plt.plot(txs, trilobite_decay(txs,*popt1))
 
 
 
-#with io.open('storage_retrieval.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+with io.open('storage_retrieval.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
