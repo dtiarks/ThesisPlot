@@ -5,8 +5,8 @@ Created on Mon Jul 17 15:28:20 2017
 @author: daniel
 """
 
-import Tomography as tom
-import quPy as qp
+#import Tomography as tom
+#import quPy as qp
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
