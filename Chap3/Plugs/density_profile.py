@@ -27,23 +27,24 @@ dF=3.
 L=42.45*dF*10**-6
 L_medium=41.55*dF-27.93
 P=0.24
-w=14.5*10**-6
+wz=14.5*10**-6
+wx=42.5*10**-6
 Dp=4.41206913e-05
 
-T=700*10**-9
+T=500*10**-9
 N_Atoms=0.8*10**5
 
 au=4*np.pi*c.epsilon_0*a0**3
 alpha=-254.*au
 
-I0=P/(np.pi*w**2)
+I0=P/(np.pi*wx*wz)
 U0=I0*(-0.5*alpha/(c.epsilon_0*c.c))
 
 def Iplug(z,z0):
-    return I0*np.exp(-2*(z-z0)**2/w**2)
+    return I0*np.exp(-2*(z-z0)**2/wz**2)
 
 def Uplug(z):
-    return U0*(np.exp(-2*(z+L/2)**2/w**2)+np.exp(-2*(z-L/2)**2/w**2))
+    return U0*(np.exp(-2*(z+L/2)**2/wz**2)+np.exp(-2*(z-L/2)**2/wz**2))
 
 def Pre(z,T):
     return np.exp(-(Uplug(z))/(c.k*T))

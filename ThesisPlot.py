@@ -6,8 +6,8 @@ import pandas as pd
 import ast
 import os
 # Set to German locale to get comma decimal separater
-#locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
-locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
+locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
+#locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
 import matplotlib as mpl
 mpl.use('pgf')
 
@@ -335,7 +335,7 @@ if __name__=='__main__':
 #    TP.addPlot(r"Chap2\KondPhase\cond_phase.json","2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=9)
 #    TP.addPlot(r"Chap2\Molecules\avg_number.json","2_9_avg_number.pgf","Chap2_Fig2.9",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=2)
 #    TP.addPlot(r"Chap2\MoleculeMemory\memory.json","2_10_memory.pgf","Chap2_Fig2.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
-#    TP.addPlot(r"Chap3\Plugs\pluglength.json","3_1_pluglength.pgf","Chap3_Fig1.1",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
+    TP.addPlot(r"Chap3\Plugs\pluglength.json","3_1_pluglength.pgf","Chap3_Fig1.1",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
 #    TP.addPlot(r"Chap3\Plugs\density_profile.json","3_2_density_profile.pgf","Chap3_Fig3.2",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=False,lloc=4)
 #    TP.addPlot(r"Chap3\IF\eif_lock.json","3_10_eif_lock.pgf","Chap3_Fig3.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=2.3,tl=True,lloc=4)
 #    TP.addPlot(r"Chap3\Laser\cavity_characterization.json","3_5_cavity.pgf","Chap3_Fig3.5",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
@@ -346,6 +346,6 @@ if __name__=='__main__':
 #    TP.addPlot(os.path.join("Chap5","cond_phase_vs_density.json"),"5_7_phase.pgf","Chap5_Fig5.7",size=1.0,cs=['b','b','r','r'],legend=False,tl=False,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
 #    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
 #    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','r'],legend=False,tl=False,h_pad=0,w_pad=0,lloc=1,ls=['','-'])
-    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_2_moleculetest.pgf","Chap5_Fig2.2",size=1.0)
+#    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_2_moleculetest.pgf","Chap5_Fig2.2",size=1.0)
     
     TP.generatePlots()
