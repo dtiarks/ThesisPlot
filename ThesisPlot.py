@@ -76,32 +76,63 @@ class ThesisPlot(object):
         for d in self.dicts:
             self.f=plt.figure()
             
-            for sp_ax in self.dicts[d]['json']:
+#            self.dicts[d]['json']=list(self.dicts[d]['json'])[::-1]
+#            print type(self.dicts[d]['json'])
+            
+            for subplot_i, sp_ax in zip(range(len(self.dicts[d]['json'])-1,-1,-1), self.dicts[d]['json']):
                 ax=self.f.add_subplot(sp_ax)
+                
+                num_curves = len(self.dicts[d]['json'][sp_ax])
                 
                 cs=self.dicts[d]['color']
                 if cs==None:
                     cs=self.colors
+                if len(np.shape(cs))==2:
+                    cs=cs[subplot_i]
                 
                 ls=self.dicts[d]['linestyle']
                 if ls==None:
                     ls=self.linestyles
+                if len(np.shape(ls))==2:
+                    ls=ls[subplot_i]
                     
                 lws=self.dicts[d]['linewidths']
                 if lws==None:
                     lws=self.linewidths
+                if len(np.shape(lws))==2:
+                    lws=lws[subplot_i]
                     
                 tl=self.dicts[d]['tight']
                 if tl:
                     self.f.tight_layout(w_pad=self.dicts[d]['wpad'],h_pad=self.dicts[d]['hpad'])
                     
+                xticks = self.dicts[d]['xticks']
+                if len(np.shape(xticks))==0:
+                    ax.xaxis.set_ticks(xticks)
+                elif len(np.shape(xticks))==1 and len(xticks) != 0:
+                    if xticks[subplot_i] is not None:
+                        ax.xaxis.set_ticks(xticks[subplot_i])
+                
+                    
+                yticks = self.dicts[d]['yticks']
+                if len(np.shape(yticks))==0:
+                    ax.yaxis.set_ticks(yticks)
+                elif len(np.shape(yticks))==1 and  len(yticks) != 0:
+                    if yticks[subplot_i] is not None:
+                        ax.yaxis.set_ticks(yticks[subplot_i])
+                
+                    
                 ms=self.dicts[d]['markers']
                 print "markers: %s"%ms
                 if ms==None:
                     ms=self.markers
+                if len(np.shape(ms))==2:
+                    ms=ms[subplot_i]
                 
                 
-                for (c,l,lw,sp,m) in zip(cs[:len(self.dicts[d]['json'][sp_ax])],ls[:len(self.dicts[d]['json'][sp_ax])],lws[:len(self.dicts[d]['json'][sp_ax])],self.dicts[d]['json'][sp_ax],ms[:len(self.dicts[d]['json'][sp_ax])]):
+                
+                for (c,l,lw,sp,m) in zip(cs[:num_curves],ls[:num_curves],lws[:num_curves],self.dicts[d]['json'][sp_ax],ms[:num_curves]):
+                    
                     if self.dicts[d]['json'][sp_ax][sp]['type']=='errorbar':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -141,8 +172,6 @@ class ThesisPlot(object):
                         except:
                             print "No y-limit found"
                             
-                        print "marker: %s"%m
-                        m='o'
                         
                         ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw,marker=m,markersize='5')
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='plot':
@@ -298,7 +327,7 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None, xticks=[], yticks=[]):
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -311,11 +340,13 @@ class ThesisPlot(object):
                                   'wpad':w_pad,
                                   'hpad':h_pad,
                                   'loc':lloc,
-                                  'legend':legend}})
+                                  'legend':legend,
+                                  'xticks':xticks,
+                                  'yticks':yticks}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
-        fig_width_pt = 455.24416
+        fig_width_pt = 405.45183
         inches_per_pt = 1.0 / 72.27                       # Convert pt to inch
         # Aesthetic ratio (you could change this) * 0.5
         golden_mean = rows * 0.51 * (np.sqrt(5.0) - 1.0) / 2.0
@@ -335,7 +366,7 @@ if __name__=='__main__':
 #    TP.addPlot(r"Chap2\KondPhase\cond_phase.json","2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=9)
 #    TP.addPlot(r"Chap2\Molecules\avg_number.json","2_9_avg_number.pgf","Chap2_Fig2.9",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.0,tl=True,lloc=2)
 #    TP.addPlot(r"Chap2\MoleculeMemory\memory.json","2_10_memory.pgf","Chap2_Fig2.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
-    TP.addPlot(r"Chap3\Plugs\pluglength.json","3_1_pluglength.pgf","Chap3_Fig1.1",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
+#    TP.addPlot(r"Chap3\Plugs\pluglength.json","3_1_pluglength.pgf","Chap3_Fig1.1",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=True,lloc=4)
 #    TP.addPlot(r"Chap3\Plugs\density_profile.json","3_2_density_profile.pgf","Chap3_Fig3.2",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=False,lloc=4)
 #    TP.addPlot(r"Chap3\IF\eif_lock.json","3_10_eif_lock.pgf","Chap3_Fig3.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=2.3,tl=True,lloc=4)
 #    TP.addPlot(r"Chap3\Laser\cavity_characterization.json","3_5_cavity.pgf","Chap3_Fig3.5",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
@@ -347,5 +378,8 @@ if __name__=='__main__':
 #    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
 #    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','r'],legend=False,tl=False,h_pad=0,w_pad=0,lloc=1,ls=['','-'])
 #    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_2_moleculetest.pgf","Chap5_Fig2.2",size=1.0)
+#    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None])
+    TP.addPlot(os.path.join("Chap6","memory_extinction.json"),"6_2_extinction.pgf","Chap6_Fig6.2",size=2,cs=['b','r'],xticks=[np.arange(-0.6,0.4,0.2),None,np.arange(-0.6,0.4,0.2),None],yticks=[None,None,np.arange(0,900,200),None])
+#    TP.addPlot(os.path.join("Chap6","memory_coherence.json"),"6_3_coherence.pgf","Chap6_Fig6.3",size=3,cs=['b','b','r','r'], ls=['','-','','-'])
     
     TP.generatePlots()

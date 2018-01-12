@@ -1,0 +1,4 @@
+ROI for this plot: 15.25 - 15.57 us (from teh script from Thomas' MSc thesis)
+MyOffset = -15.2
+subtracted in "Fit-Counts-L.nb" and "Fit-Counts-R.nb"
+Hence, ROI 0.05 - 0.37 us
