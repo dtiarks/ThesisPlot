@@ -6,8 +6,8 @@ import pandas as pd
 import ast
 import os
 # Set to German locale to get comma decimal separater
-locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
-#locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
+#locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
+locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
 import matplotlib as mpl
 mpl.use('pgf')
 
@@ -304,7 +304,7 @@ class ThesisPlot(object):
 #                            l.label1.set_visible(False)
             
             s=self.figsize(self.dicts[d]['size'],1.0)
-            self.f.subplots_adjust(bottom=0.2) 
+            self.f.subplots_adjust(bottom=self.dicts[d]['bottom']) 
             self.f.set_size_inches(*s)
             print self.dicts[d]['outfile']
             self.f.savefig(self.dicts[d]['outfile'])
@@ -327,7 +327,7 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None, xticks=[], yticks=[]):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None, xticks=[], yticks=[], bottom=0.2):
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -342,7 +342,8 @@ class ThesisPlot(object):
                                   'loc':lloc,
                                   'legend':legend,
                                   'xticks':xticks,
-                                  'yticks':yticks}})
+                                  'yticks':yticks,
+                                  'bottom':bottom}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
@@ -378,8 +379,8 @@ if __name__=='__main__':
 #    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
 #    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','r'],legend=False,tl=False,h_pad=0,w_pad=0,lloc=1,ls=['','-'])
 #    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_2_moleculetest.pgf","Chap5_Fig2.2",size=1.0)
-#    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None])
-    TP.addPlot(os.path.join("Chap6","memory_extinction.json"),"6_2_extinction.pgf","Chap6_Fig6.2",size=2,cs=['b','r'],xticks=[np.arange(-0.6,0.4,0.2),None,np.arange(-0.6,0.4,0.2),None],yticks=[None,None,np.arange(0,900,200),None])
-#    TP.addPlot(os.path.join("Chap6","memory_coherence.json"),"6_3_coherence.pgf","Chap6_Fig6.3",size=3,cs=['b','b','r','r'], ls=['','-','','-'])
+    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None], bottom=0.11)
+#    TP.addPlot(os.path.join("Chap6","memory_extinction.json"),"6_2_extinction.pgf","Chap6_Fig6.2",size=2,cs=['b','r'],xticks=[np.arange(-0.6,0.4,0.2),None,np.arange(-0.6,0.4,0.2),None],yticks=[None,None,np.arange(0,900,200),None], bottom=0.11)
+#    TP.addPlot(os.path.join("Chap6","memory_coherence.json"),"6_3_coherence.pgf","Chap6_Fig6.3",size=3,cs=['b','b','r','r'], ls=['','-','','-'], bottom=0.075)
     
     TP.generatePlots()
