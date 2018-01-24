@@ -49,8 +49,8 @@ def resadjust(ax, xres=None, yres=None):
 
 fitParameters={
   "binningHisto":0.05e-7,
-#  "histoInterval":(11.25,11.75),
-  "histoInterval":(11.65,11.75),
+  "histoInterval":(11.25,11.75),
+#  "histoInterval":(11.65,11.75),
   "refScale":1/0.0002,
   "initRef":[25, 2,25],
   "initPost":[25, 2,25],
@@ -170,19 +170,19 @@ ax3.set_ylabel("transmitted photons in 50ns",labelpad=-0.00, fontsize=14)
 
 resadjust(ax2,yres=0.02)
 
+start = 2100
 
-
-h=pd.DataFrame(index=histo[2100:2500,step*6]-delay,data=histo[2100:2500,step*6+4])
+h=pd.DataFrame(index=histo[start:2500,step*6]-delay,data=histo[start:2500,step*6+4])
 h2=pd.DataFrame(index=fT2-delay,data=fitFunc(fT2,*popt1))
 plot_dict['121']={
     'A':{'type':'scatter','y':h[0].to_json(),'num':'a','xlabel':u'Zeit ($\mu s$)',
          'xlim':(fitParameters["xscale"][0]-delay,fitParameters["xscale"][1]-delay),'ylim':(0,0.05),'label':'Daten'},
-    'B':{'type':'plot','y':h2[0].to_json(),'label':'Kurvenanpassung','ylabel':u'Intensit\"at (Photonen/50 ns)'},
+    'B':{'type':'plot','y':h2[0].to_json(),'label':'Kurvenanpassung','ylabel':u'Intensit\"at\n(Photonen/50 ns)'},
     'C':{'type':'axv','y':1.5878}
 }
 
 
-h=pd.DataFrame(index=histoPost[2100:2500,step*9]-delay,data=(histoPost[2100:2500,step*9+2]/histoPost[2100:2500,step*9+4])*3.7)
+h=pd.DataFrame(index=histoPost[start:2500,step*9]-delay,data=(histoPost[start:2500,step*9+2]/histoPost[start:2500,step*9+4])*3.7)
 h2=pd.DataFrame(index=fT1-delay,data=fitFunc(fT1,*popt0))
 
 plot_dict['122']={
@@ -196,8 +196,8 @@ plt.show()
 
 print("Controlled phase shift: %.3f"%(popt1[1]-popt0[1]))
 
-#with io.open('sideband_postselected_phaseshift.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+with io.open('sideband_postselected_phaseshift.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 

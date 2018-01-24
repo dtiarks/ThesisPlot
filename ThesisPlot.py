@@ -6,8 +6,8 @@ import pandas as pd
 import ast
 import os
 # Set to German locale to get comma decimal separater
-#locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
-locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
+locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
+#locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
 import matplotlib as mpl
 mpl.use('pgf')
 
@@ -372,14 +372,14 @@ if __name__=='__main__':
 #    TP.addPlot(r"Chap3\IF\eif_lock.json","3_10_eif_lock.pgf","Chap3_Fig3.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=2.3,tl=True,lloc=4)
 #    TP.addPlot(r"Chap3\Laser\cavity_characterization.json","3_5_cavity.pgf","Chap3_Fig3.5",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
 #    TP.addPlot(r"Chap5\sideband_postselected_phaseshift.json","5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
-#    TP.addPlot(os.path.join("Chap5","sideband_postselected_phaseshift.json"),"5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','k','r'],legend=True,h_pad=0,w_pad=0.,lloc=1)
-#    TP.addPlot(os.path.join("Chap5","spectrum.json"),"5_1_spectrum.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r','r','b'],legend=True,h_pad=0,w_pad=2.,lloc=1,tl=True)
-#    TP.addPlot(os.path.join("Chap5","pol_spectra.json"),"5_4_spectra.pgf","Chap5_Fig5.4",size=1.0,cs=['b','b','r','k','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-','-',''],m=['o','','o','',''])
-#    TP.addPlot(os.path.join("Chap5","cond_phase_vs_density.json"),"5_7_phase.pgf","Chap5_Fig5.7",size=1.0,cs=['b','b','r','r'],legend=False,tl=False,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
-#    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['o','','o','',''])
-#    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','r'],legend=False,tl=False,h_pad=0,w_pad=0,lloc=1,ls=['','-'])
+#    TP.addPlot(os.path.join("Chap5","sideband_postselected_phaseshift.json"),"5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','k','r'],legend=True,h_pad=0,w_pad=0.,lloc=1, bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","spectrum.json"),"5_1_spectrum.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r','r','b'],legend=True,h_pad=0,w_pad=2.,lloc=1,tl=True, bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","pol_spectra.json"),"5_4_spectra.pgf","Chap5_Fig5.4",size=1.0,cs=['b','b','r','k','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-','-',''],m=['','o','','','o'], bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","cond_phase_vs_density.json"),"5_7_phase.pgf","Chap5_Fig5.7",size=1.0,cs=['b','b','r','r'],legend=False,tl=False,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['','o','','o',''], bottom=0.23)
+    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['','o','','o',''], bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','r'],legend=False,tl=False,h_pad=0,w_pad=0,lloc=1,ls=['','-'], bottom=0.22)
 #    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_2_moleculetest.pgf","Chap5_Fig2.2",size=1.0)
-    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None], bottom=0.11)
+#    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None], bottom=0.11)
 #    TP.addPlot(os.path.join("Chap6","memory_extinction.json"),"6_2_extinction.pgf","Chap6_Fig6.2",size=2,cs=['b','r'],xticks=[np.arange(-0.6,0.4,0.2),None,np.arange(-0.6,0.4,0.2),None],yticks=[None,None,np.arange(0,900,200),None], bottom=0.11)
 #    TP.addPlot(os.path.join("Chap6","memory_coherence.json"),"6_3_coherence.pgf","Chap6_Fig6.3",size=3,cs=['b','b','r','r'], ls=['','-','','-'], bottom=0.075)
     

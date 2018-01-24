@@ -106,31 +106,31 @@ ax1.plot(dsf,pfitOn,"r")
 
 plt.show()
 
-#plot_dict={}
-#
-#h=pd.DataFrame(index=ds,data=2*np.log(aRef[:,0]/a[:,0]))
-#h2=pd.DataFrame(index=ds,data=2*np.log(aRef[:,0]/a[:,1]))
-#h3=pd.DataFrame(index=dsf,data=OfitOff)
-#h4=pd.DataFrame(index=dsf,data=OfitOn)
-#plot_dict['121']={
-#    'A':{'type':'scatter','y':h[0].to_json(),'num':'a','label':'Kontroll an','xlabel':u'Signalverstimmung $\Delta_s/2 \pi$ (MHz)','ylabel':u'OD','xlim':(4,16),'ylim':(0,3.2)},
-#    'B':{'type':'scatter','y':h2[0].to_json(),'label':'Kontroll aus'},
-#    'C':{'type':'plot','y':h3[0].to_json()},
-#    'D':{'type':'plot','y':h4[0].to_json()},
-#}
-#
-#dsf=np.linspace(4,16,num=len(freqFitP))
-#
-#h=pd.DataFrame(index=ds,data=(p[:,0]-pRef[:,0]),)
-#h2=pd.DataFrame(index=ds,data=(p[:,1]-pRef[:,1]))
-#h3=pd.DataFrame(index=dsf,data=pfitOff)
-#h4=pd.DataFrame(index=dsf,data=pfitOn)
-#plot_dict['122']={
-#    'A':{'type':'scatter','y':h[0].to_json(),'num':'b','xlabel':u'Signalverstimmung $\Delta_s/2 \pi$ (MHz)','ylabel':u'Phase (rad)','xlim':(4,16)},
-#    'B':{'type':'scatter','y':h2[0].to_json()},
-#    'C':{'type':'plot','y':h3[0].to_json()},
-#    'D':{'type':'plot','y':h4[0].to_json()},
-#}
-#
-#with io.open('spectrum.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+plot_dict={}
+
+h=pd.DataFrame(index=ds,data=2*np.log(aRef[:,0]/a[:,0]))
+h2=pd.DataFrame(index=ds,data=2*np.log(aRef[:,0]/a[:,1]))
+h3=pd.DataFrame(index=dsf,data=OfitOff)
+h4=pd.DataFrame(index=dsf,data=OfitOn)
+plot_dict['121']={
+    'A':{'type':'scatter','y':h[0].to_json(),'num':'a','label':'Kontroll an','xlabel':u'Signalverstimmung $\Delta_s/2 \pi$ (MHz)','ylabel':u'OD','xlim':(4,16),'ylim':(0,3.55)},
+    'B':{'type':'scatter','y':h2[0].to_json(),'label':'Kontroll aus'},
+    'C':{'type':'plot','y':h3[0].to_json()},
+    'D':{'type':'plot','y':h4[0].to_json()},
+}
+
+dsf=np.linspace(4,16,num=len(freqFitP))
+
+h=pd.DataFrame(index=ds,data=(p[:,0]-pRef[:,0]),)
+h2=pd.DataFrame(index=ds,data=(p[:,1]-pRef[:,1]))
+h3=pd.DataFrame(index=dsf,data=pfitOff)
+h4=pd.DataFrame(index=dsf,data=pfitOn)
+plot_dict['122']={
+    'A':{'type':'scatter','y':h[0].to_json(),'num':'b','xlabel':u'Signalverstimmung $\Delta_s/2 \pi$ (MHz)','ylabel':u'Phase (rad)','xlim':(4,16)},
+    'B':{'type':'scatter','y':h2[0].to_json()},
+    'C':{'type':'plot','y':h3[0].to_json()},
+    'D':{'type':'plot','y':h4[0].to_json()},
+}
+
+with io.open('spectrum.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))

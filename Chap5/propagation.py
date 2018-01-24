@@ -69,10 +69,10 @@ plt.scatter(s_params[:,0], s_params[:,7], marker='o',c='r')
 plt.scatter(s_params[:,0], s_params[:,8], marker='o',c='b')
 plt.xlim((11.,14.5))
 
+start=47
 
-
-h=pd.DataFrame(index=polar[:-2,0],data=polar[:-2,1])
-h_err=pd.DataFrame(index=polar[:-2,0],data=polar[:-2,2])
+h=pd.DataFrame(index=polar[:start,0],data=polar[:start,1])
+h_err=pd.DataFrame(index=polar[:start,0],data=polar[:start,2])
 h2=pd.DataFrame(index=polar_fit[:,0],data=polar_fit[:,1])
 
 plot_dict['122']={
@@ -82,12 +82,12 @@ plot_dict['122']={
 
 plt.subplot(122)
 plt.plot(polar_fit[:,0], polar_fit[:,1], ls='-',lw=1.5,c='r')
-plt.errorbar(polar[:,0], polar[:,1], yerr=polar[:,2], ls="", marker='o',lw=1.5,c='k')
+plt.errorbar(polar[:start,0], polar[:start,1], yerr=polar[:start,2], ls="", marker='o',lw=1.5,c='k')
 plt.xlim((11.,14.5))
 
 
-#with io.open('propagation.json', 'w+') as f:
-#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+with io.open('propagation.json', 'w+') as f:
+  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
 
 
 plt.show()
