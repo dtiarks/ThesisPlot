@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<ExperimentSequence>
+
+  <Event Name="VariableRemoteControl" Editable="editable" Execute="true"/>
+  <Event Name="RotateWaveplates" Execute="false" Editable="editable"/>
+  <Event Name="InitExperimentPartValues" Editable="fixed" Execute="true"/> 
+  <Event Name="Init" Editable="fixed" Execute="true"/>
+  <Event Name="ExecuteExt3rd" Editable="editable" Execute="false"/>
+  <Event Name="InitSRS" Editable="editable" Execute="false"/> 
+  <Event Name="InitVfg" Editable="editable" Execute="false"/> 
+  <Event Name="InitQComposer" Editable="editable" Execute="true"/>
+  <Event Name="InitDDSBox" Editable="editable" Execute="true"/>
+  <Event Name="InitNewDDS" Editable="editable" Execute="true"/>
+  <Event Name="ThermalizationDelay" Editable="editable" Execute="false"/>
+  <Event Name="ExecuteExt" Editable="editable" Execute="false"/>
+  <Event Name="PlugRamp" Editable="editable" Execute="false"/>
+  <Event Name="ExecuteExt4th" Editable="editable" Execute="false"/>
+  <Event Name="Microwave" Editable="editable" Execute="false"/>	
+  <Event Name="MicrowaveFreqSweep" Editable="editable" Execute="false"/>
+  <Event Name="MicrowaveSteppedSweep" Editable="editable" Execute="false"/>
+  <Event Name="Microwave2" Editable="editable" Execute="false"/>
+  <Event Name="Microwave2RampUpDown" Editable="editable" Execute="false"/>
+  <Event Name="Microwave3" Editable="editable" Execute="false"/>	
+  <Event Name="WobbleSignal" Execute="false" Editable="editable"/>
+  <Event Name="TomographyRotations" Execute="true" Editable="editable"/>
+  <Event Name="MOTMultipleTransfer" Editable="editable" Execute="true"/>
+  <Event Name="CompressMOT" Editable="editable" Execute="true"/>
+  <Event Name="DoMolassesAndOptPumpF2" Editable="editable" Execute="true"/>
+  <Event Name="DoMolassesAndOptPump" Editable="editable" Execute="false"/>
+  <Event Name="LoadMagTrap" Editable="sequential" Execute="true"/>
+  <Event Name="CompressMagTrap" Editable="editable" Execute="true"/>
+  <Event Name="CompressMagTrapTurnOffAndRotateBFields" Editable="editable" Execute="false"/>
+  <Event Name="DoRFCooling" Editable="sequential" Execute="true"/> 
+  <Event Name="TransferToDipoleTrap" Editable="editable" Execute="true"/>
+  <Event Name="TransferToDipoleTrapWithBComp" Editable="editable" Execute="false"/>
+  <Event Name="SyncToPowerline" Editable="editable" Execute="true"/>
+  <Event Name="HoldInDipoleTrapWithBCompRamp" Execute="true" Editable="editable"/>
+  <Event Name="HoldInDipoleTrap" Execute="false" Editable="editable"/>
+  <Event Name="MicrowavePiPulse" Editable="editable" Execute="false"/>
+  <Event Name="BlowAwayF2" Editable="editable" Execute="false"/>
+  <Event Name="MicrowavePiPulse" Editable="editable" Execute="false"/>
+  <Event Name="EITExperiment" Editable="editable" Execute="true"/>
+  <Event Name="LowerMOTAbsorptionPicture" Editable="editable" Execute="true"/>
+  <Event Name="DoubleMOTOff" Editable="fixed" Execute="true"/> 
+  <Event Name="DisableMagTrap" Editable="fixed" Execute="true"/> 
+  <Event Name="DumpADwinBoxTimingList" Editable="fixed" Execute="true"/> 
+  <Event Name="StartADwinBox" Editable="fixed" Execute="true"/>
+  <Event Name="WaitForADwinBox" Editable="fixed" Execute="true"/> 
+  
+
+</ExperimentSequence>
