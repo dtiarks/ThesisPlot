@@ -14,13 +14,13 @@ import os
 import json
 import io
 import scipy.constants as co
-import rydpy
+#import rydpy
 
 c = 299792458 # m/s, speed of light CODATA 2014
 a0 = 0.52917721067e-10 # m, Bohr radius
 C6 = 2.3e23 * 4.36e-18 * a0**6 # Jm^6, Van-der-Waals coefficient for the 67s - 69s
 hbar = 6.626070040e-34/(2 * np.pi) # Js, Planck constant, CODATA 2014
-rho_peak = 2.0e12/1e-6 # peak density in cm^-3/centi^-3
+rho_peak = 2.4e12/1e-6 # peak density in cm^-3/centi^-3
 d = 2.534e-29 # Cm, dipole matrix element (D. A. Steck)
 Gamma_e = 2*np.pi * 6.065e6 # decay rate (D. A. Steck)
 epsilon_0 = 8.854187817e-12 # dielectric constant, CODATA 2014
@@ -57,8 +57,8 @@ print rBend/a0
 #plt.plot(r,rrRR)
 #plt.axvline(np.abs(r[imax]))
 
-
-#print rho_peak*Vcl
+print "Average number of atoms inside Orbital for n=69"
+print rho_peak*Vcl1
 
 rhos=np.linspace(0,3e12/1e-6,10)
 

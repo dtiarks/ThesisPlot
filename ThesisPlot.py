@@ -6,8 +6,8 @@ import pandas as pd
 import ast
 import os
 # Set to German locale to get comma decimal separater
-locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
-#locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
+#locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
+locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
 import matplotlib as mpl
 mpl.use('pgf')
 
@@ -386,6 +386,6 @@ if __name__=='__main__':
 #    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None], bottom=0.11)
 #    TP.addPlot(os.path.join("Chap6","memory_extinction.json"),"6_2_extinction.pgf","Chap6_Fig6.2",size=2,cs=['b','r'],xticks=[np.arange(-0.6,0.4,0.2),None,np.arange(-0.6,0.4,0.2),None],yticks=[None,None,np.arange(0,900,200),None], bottom=0.11)
 #    TP.addPlot(os.path.join("Chap6","memory_coherence.json"),"6_3_coherence.pgf","Chap6_Fig6.3",size=3,cs=['b','b','r','r'], ls=['','-','','-'], bottom=0.075)
-    TP.addPlot(os.path.join("Chap6","darktime.json"),"6_4_darktime.pgf","Chap6_Fig6.4",size=1,cs=(('b','b','b'),('r','b','b')), ls=[['','-',''],['','-','']], tl=True,h_pad=0,w_pad=1.5, bottom=0.22)
-    
+#    TP.addPlot(os.path.join("Chap6","darktime.json"),"6_4_darktime.pgf","Chap6_Fig6.4",size=1,cs=(('b','b','b'),('r','b','b')), ls=[['','-',''],['','-','']], tl=True,h_pad=0,w_pad=1.5, bottom=0.22)
+    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_avgnumber.pgf","Chap2_Fig2.2")    
     TP.generatePlots()
