@@ -132,5 +132,5 @@ plot_dict['122']={
     'D':{'type':'plot','y':h4[0].to_json()},
 }
 
-with io.open('spectrum.json', 'w+') as f:
-  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
+#with io.open('spectrum.json', 'w+') as f:
+#  f.write(unicode(json.dumps(plot_dict, ensure_ascii=False,indent=4)))
