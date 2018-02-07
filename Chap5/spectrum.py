@@ -103,6 +103,8 @@ ax1.plot(ds,(p[:,0]-pRef[:,0]),'ro',label="control on")
 ax1.plot(ds,(p[:,1]-pRef[:,1]),'bo',label="control off")
 ax1.plot(dsf,pfitOff,"b")
 ax1.plot(dsf,pfitOn,"r")
+ax1.set_ylabel("Phase")
+
 
 plt.show()
 
@@ -113,8 +115,8 @@ h2=pd.DataFrame(index=ds,data=2*np.log(aRef[:,0]/a[:,1]))
 h3=pd.DataFrame(index=dsf,data=OfitOff)
 h4=pd.DataFrame(index=dsf,data=OfitOn)
 plot_dict['121']={
-    'A':{'type':'scatter','y':h[0].to_json(),'num':'a','label':'Kontroll an','xlabel':u'Signalverstimmung $\Delta_s/2 \pi$ (MHz)','ylabel':u'OD','xlim':(4,16),'ylim':(0,3.55)},
-    'B':{'type':'scatter','y':h2[0].to_json(),'label':'Kontroll aus'},
+    'A':{'type':'scatter','y':h[0].to_json(),'num':'a','label':'Kopplung an','xlabel':u'Signalverstimmung $\Delta_s/2 \pi$ (MHz)','ylabel':u'OD','xlim':(4,16),'ylim':(0,3.55)},
+    'B':{'type':'scatter','y':h2[0].to_json(),'label':'Kopplung aus'},
     'C':{'type':'plot','y':h3[0].to_json()},
     'D':{'type':'plot','y':h4[0].to_json()},
 }

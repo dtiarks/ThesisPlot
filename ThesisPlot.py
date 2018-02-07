@@ -6,8 +6,8 @@ import pandas as pd
 import ast
 import os
 # Set to German locale to get comma decimal separater
-#locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
-locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
+locale.setlocale(locale.LC_NUMERIC, 'deu_deu')
+#locale.setlocale(locale.LC_NUMERIC, 'de_DE.utf8')
 import matplotlib as mpl
 mpl.use('pgf')
 
@@ -40,7 +40,7 @@ pgf_with_latex = {                      # setup matplotlib to use latex for outp
     "legend.fontsize": 10,               # Make the legend/label fonts a little smaller
     "xtick.labelsize": 10,
     "ytick.labelsize": 10,
-    "figure.figsize": [1*5.67, 1.76],   # default fig size of 0.9 textwidth
+    "figure.figsize": [0.9*5.67, 1.76],   # default fig size of 0.9 textwidth
     "errorbar.capsize": 0,             # set standard
     "markers.fillstyle": 'none',
     "lines.markersize": 1,
@@ -68,6 +68,7 @@ class ThesisPlot(object):
     linestyles=['-','-','-','-','-','-']
     linewidths=[1.5,1.5,1.5,1.5,1.5,1.5]
     markers=['o','o','o','o','o']
+    elinewidth = 0.8
 
     def __init__(self):
         self.dicts=dict()
@@ -82,24 +83,27 @@ class ThesisPlot(object):
             for subplot_i, sp_ax in zip(range(len(self.dicts[d]['json'])-1,-1,-1), self.dicts[d]['json']):
                 ax=self.f.add_subplot(sp_ax)
                 
+                ylabeloffset=self.dicts[d]['ylabeloff'][subplot_i]
+                print "ylavel off: "
+                print ylabeloffset
+                
+                if ylabeloffset:
+                    ax.yaxis.set_label_coords(ylabeloffset,0.5)
+                
                 num_curves = len(self.dicts[d]['json'][sp_ax])
                 
                 cs=self.dicts[d]['color']
-                print cs
                 if cs==None:
                     cs=self.colors
                 if len(np.shape(cs))==2:
                     cs=cs[subplot_i]
                     
                 
-                
                 ls=self.dicts[d]['linestyle']
                 if ls==None:
                     ls=self.linestyles
                 if len(np.shape(ls))==2:
                     ls=ls[subplot_i]
-                    
-                print "linestyles: %s"%ls
                     
                 lws=self.dicts[d]['linewidths']
                 if lws==None:
@@ -112,8 +116,10 @@ class ThesisPlot(object):
                     self.f.tight_layout(w_pad=self.dicts[d]['wpad'],h_pad=self.dicts[d]['hpad'])
                     
                 xticks = self.dicts[d]['xticks']
-                if len(np.shape(xticks))==0:
-                    ax.xaxis.set_ticks(xticks)
+                print "shape"
+                print np.shape(xticks)
+                if np.shape(xticks)[0]==1:
+                    ax.xaxis.set_ticks(xticks[0])
                 elif len(np.shape(xticks))==1 and len(xticks) != 0:
                     if xticks[subplot_i] is not None:
                         ax.xaxis.set_ticks(xticks[subplot_i])
@@ -128,7 +134,6 @@ class ThesisPlot(object):
                 
                     
                 ms=self.dicts[d]['markers']
-                print "markers: %s"%ms
                 if ms==None:
                     ms=self.markers
                 if len(np.shape(ms))==2:
@@ -178,7 +183,7 @@ class ThesisPlot(object):
                             print "No y-limit found"
                             
                         
-                        ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw,marker=m,markersize='5')
+                        ax.errorbar(x,y,yerr=yerr,label=label,color=c,ls=l,lw=lw,marker=m,markersize='5', elinewidth=self.elinewidth)
                     elif self.dicts[d]['json'][sp_ax][sp]['type']=='plot':
                         df = pd.DataFrame.from_dict(json.loads(self.dicts[d]['json'][sp_ax][sp]['y']),orient='index')
                         df.set_index(np.array(df.index.values,dtype=np.float32),inplace=True)
@@ -307,6 +312,7 @@ class ThesisPlot(object):
 #                        print bbox, xwin, ywin
 #                        if self._overlaps(np.array(bbox), xwin, ywin):
 #                            l.label1.set_visible(False)
+
             
             s=self.figsize(self.dicts[d]['size'],1.0)
             self.f.subplots_adjust(bottom=self.dicts[d]['bottom']) 
@@ -332,7 +338,11 @@ class ThesisPlot(object):
             
         return plotDict
 
-    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None, xticks=[], yticks=[], bottom=0.2):
+    def addPlot(self,name,outname,figid,size=2,ls=None,cs=None,lw=None,tl=False,w_pad=2.,h_pad=2.,legend=False,lloc=1,m=None, xticks=[], yticks=[], bottom=0.2,yoffset=None):
+        nplots=len(self.parsePlotDict(name))
+        if yoffset is None:
+            yoffset=[None for _ in range(nplots)]
+                    
         self.dicts.update({figid:{'infile':name,
                                   'outfile':outname,
                                   'size':size,
@@ -348,7 +358,8 @@ class ThesisPlot(object):
                                   'legend':legend,
                                   'xticks':xticks,
                                   'yticks':yticks,
-                                  'bottom':bottom}})
+                                  'bottom':bottom,
+                                  'ylabeloff':yoffset}})
 
     def figsize(self, rows, scale):
         # Get this from LaTeX using \the\textwidth
@@ -366,26 +377,26 @@ if __name__=='__main__':
 #    TP.addPlot("Chap2\Groupdelay\groupdelay.json","2_2_groupdelay.pgf","Chap2_Fig2.2")
 #    TP.addPlot(os.path.join("Chap2","Suszept","suszept.json"),"2_1_suszept.pgf","Chap2_Fig2.1",size=2,cs=['b','k','r'],ls=['-','--','-'],lw=[1.5,1,1.5], bottom=0.11)
 #    TP.addPlot(r"blank1.json","2_3_blank.pgf","Chap2_Fig2.3",size=1)
-#    TP.addPlot(os.path.join("Chap2","Transient","eit_propagation.json"),"2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,w_pad=1.6, bottom=0.22)
+    TP.addPlot(os.path.join("Chap2","Transient","eit_propagation.json"),"2_3_eit_propagation.pgf","Chap2_Fig2.3",size=1,tl=True,yoffset=[-0.13,None],w_pad=1.6, bottom=0.22)
 #    TP.addPlot("Chap2\Foerster\defect.json","2_4_foerster_defect.pgf","Chap2_Fig2.4",size=1.0,legend=True,cs=['b','r','k'])
-#    TP.addPlot(os.path.join("Chap2","BlockadeSuszept","blockade_suszept.json"),"2_7_blockade_suszept.pgf","Chap2_Fig2.7",size=1.0,legend=True,cs=['b','r'], bottom=0.22)
-#    TP.addPlot(os.path.join("Chap2","KondPhase","cond_phase.json"),"2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],legend=True,h_pad=0.0,w_pad=1.3,tl=True,lloc=9, bottom=0.22)
-#    TP.addPlot(os.path.join("Chap2","MoleculeMemory","memory.json"),"2_10_memory.pgf","Chap2_Fig2.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.9,tl=True,lloc=4, bottom=0.22)
+#    TP.addPlot(os.path.join("Chap2","BlockadeSuszept","blockade_suszept.json"),"2_7_blockade_suszept.pgf","Chap2_Fig2.7",size=1.0,legend=True,cs=['b','r'], bottom=0.22,h_pad=0.0,w_pad=1.2,tl=True)
+#    TP.addPlot(os.path.join("Chap2","KondPhase","cond_phase.json"),"2_8_cond_phase.pgf","Chap2_Fig2.8",size=1.0,cs=['b','k','r'],yoffset=[-0.145,None],legend=True,h_pad=0.0,w_pad=1.4,tl=True,lloc=9, bottom=0.22)
+#    TP.addPlot(os.path.join("Chap2","MoleculeMemory","memory.json"),"2_10_memory.pgf","Chap2_Fig2.10",size=1.0,cs=['b','r'],yoffset=[-0.19,None],legend=True,h_pad=0.0,w_pad=1.9,tl=True,lloc=4, bottom=0.22)
 #    TP.addPlot(os.path.join("Chap3","Plugs","density_profile.json"),"3_2_density_profile.pgf","Chap3_Fig3.2",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=False,lloc=4, bottom=0.22)
 #    TP.addPlot(os.path.join("Chap3","Plugs","pluglength.json"),"3_1_pluglength.pgf","Chap3_Fig1.1",size=1.0,cs=['b','r'],legend=False,h_pad=0.0,w_pad=1.5,tl=True,lloc=4, bottom=0.22)
 #    TP.addPlot(os.path.join("Chap3","IF","eif_lock.json"),"3_10_eif_lock.pgf","Chap3_Fig3.10",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=2.3,tl=True,lloc=4, bottom=0.22)
 #    TP.addPlot(os.path.join("Chap3","Laser","cavity_characterization.json"),"3_5_cavity.pgf","Chap3_Fig3.5",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1, bottom=0.22)
 #    TP.addPlot(r"Chap5\sideband_postselected_phaseshift.json","5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r'],legend=True,h_pad=0.0,w_pad=1.,tl=True,lloc=1)
 #    TP.addPlot(os.path.join("Chap5","sideband_postselected_phaseshift.json"),"5_2_phaseshift.pgf","Chap5_Fig5.2",size=1.0,cs=['b','k','r'],legend=True,h_pad=0,w_pad=0.,lloc=1, bottom=0.22)
-#    TP.addPlot(os.path.join("Chap5","spectrum.json"),"5_1_spectrum.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r','r','b'],legend=True,h_pad=0,w_pad=2.,lloc=1,tl=True, bottom=0.22)
-#    TP.addPlot(os.path.join("Chap5","pol_spectra.json"),"5_4_spectra.pgf","Chap5_Fig5.4",size=1.0,cs=['b','b','r','k','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-','-',''],m=['','o','','','o'], bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","spectrum.json"),"5_1_spectrum.pgf","Chap5_Fig5.2",size=1.0,cs=['b','r','r','b'], yoffset=[-0.18,None],legend=True,h_pad=0,w_pad=2.,lloc=1,tl=True, bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","pol_spectra.json"),"5_4_spectra.pgf","Chap5_Fig5.4",size=1.0,cs=['b','b','r','k','r'],yoffset=[-0.14,None],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-','-',''],m=['','o','','','o'], bottom=0.22)
 #    TP.addPlot(os.path.join("Chap5","cond_phase_vs_density.json"),"5_7_phase.pgf","Chap5_Fig5.7",size=1.0,cs=['b','b','r','r'],legend=False,tl=False,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['','o','','o',''], bottom=0.23)
-#    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],legend=False,tl=True,h_pad=0,w_pad=1.8,lloc=1,ls=['-','','-',''],m=['','o','','o',''], bottom=0.22)
+#    TP.addPlot(os.path.join("Chap5","propagation.json"),"5_5_propagation.pgf","Chap5_Fig5.5",size=1.0,cs=['b','b','r','r'],xticks=[np.arange(11,14.5,1)],yoffset=[-0.18,None],legend=False,tl=True,h_pad=0,w_pad=2.2,lloc=1,ls=['-','','-',''],m=['','o','','o',''], bottom=0.22)
 #    TP.addPlot(os.path.join("Chap5","storage_retrieval.json"),"5_6_storage.pgf","Chap5_Fig5.6",size=1.0,cs=['b','r'],legend=False,tl=False,h_pad=0,w_pad=0,lloc=1,ls=['','-'], bottom=0.22)
 #    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_2_moleculetest.pgf","Chap5_Fig2.2",size=1.0)
 #    TP.addPlot(os.path.join("Chap6","memory_spectra.json"),"6_1_spectra.pgf","Chap6_Fig6.1",size=2,cs=[['b','b'],['r','r'],['b','b'],['r','r']],ls=['-',''], tl=True,h_pad=-1.,w_pad=0,yticks=[None,None,[-9,-6,-3,0,3,6,9],None], bottom=0.11)
 #    TP.addPlot(os.path.join("Chap6","memory_extinction.json"),"6_2_extinction.pgf","Chap6_Fig6.2",size=2,cs=['b','r'],xticks=[np.arange(-0.6,0.4,0.2),None,np.arange(-0.6,0.4,0.2),None],yticks=[None,None,np.arange(0,900,200),None], bottom=0.11)
 #    TP.addPlot(os.path.join("Chap6","memory_coherence.json"),"6_3_coherence.pgf","Chap6_Fig6.3",size=3,cs=['b','b','r','r'], ls=['','-','','-'], bottom=0.075)
-#    TP.addPlot(os.path.join("Chap6","darktime.json"),"6_4_darktime.pgf","Chap6_Fig6.4",size=1,cs=(('b','b','b'),('r','b','b')), ls=[['','-',''],['','-','']], tl=True,h_pad=0,w_pad=1.5, bottom=0.22)
-    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_avgnumber.pgf","Chap2_Fig2.2")    
+#    TP.addPlot(os.path.join("Chap6","darktime.json"),"6_4_darktime.pgf","Chap6_Fig6.4",size=1,yoffset=[-0.14,None],cs=(('b','b','b'),('r','b','b')), ls=[['','-',''],['','-','']], tl=True,h_pad=0,w_pad=1.5, bottom=0.22)
+#    TP.addPlot(os.path.join("Chap2","Molecules","avg_number.json"),"2_avgnumber.pgf","Chap2_Fig2.2")    
     TP.generatePlots()

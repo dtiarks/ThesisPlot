@@ -9932,7 +9932,7 @@
 \pgftext[x=0.645724in,y=1.591499in,right,]{\sffamily\fontsize{10.000000}{12.000000}\selectfont \(\displaystyle 0,05\)}%
 \end{pgfscope}%
 \begin{pgfscope}%
-\pgftext[x=0.100817in,y=0.696841in,left,base,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont Intensit"at}%
+\pgftext[x=0.100817in,y=0.731305in,left,base,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont Z"ahlrate}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgftext[x=0.268024in,y=0.430188in,left,base,rotate=90.000000]{\sffamily\fontsize{11.000000}{13.200000}\selectfont (Photonen/50 ns)}%

@@ -151,7 +151,7 @@ plot_dict={}
 h=pd.DataFrame(index=int_array,data=p_array)
 h2=pd.DataFrame(index=int_array,data=p2_array)
 plot_dict['121']={
-    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\Delta \\varphi$ (rad)','xlabel':u'$\Delta_s/ \Gamma_3$','margin':(0.1,0.2),'num':'a','xlim':(-4.2,-1.6),'ylim':(1,6),'label':'Num. Integration'},                
+    'A':{'type':'plot','y':h[0].to_json(),'ylabel':u'$\Delta \\varphi$ (rad)','xlabel':u'$\Delta_s/ \Gamma_3$','margin':(0.1,0.2),'num':'a','xlim':(-4.2,-1.6),'ylim':(1,6),'label':'Numerisch'},                
     'B':{'type':'plot','y':h2[0].to_json(),'label':'N\"aherung'},
     'C':{'type':'axh','y':np.pi}
 }

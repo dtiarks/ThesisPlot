@@ -71,17 +71,21 @@ plt.xlim((11.,14.5))
 
 start=47
 
+polar_start = 8
+
 h=pd.DataFrame(index=polar[:start,0],data=polar[:start,1])
 h_err=pd.DataFrame(index=polar[:start,0],data=polar[:start,2])
-h2=pd.DataFrame(index=polar_fit[:,0],data=polar_fit[:,1])
+h2=pd.DataFrame(index=polar_fit[polar_start:,0],data=polar_fit[polar_start:,1])
 
 plot_dict['122']={
     'A':{'type':'plot','y':h2[0].to_json()},
     'B':{'type':'errorbar','y':h[0].to_json(),'yerr':h_err[0].to_json(),'ylabel':u'Polarwinkel (rad)','xlabel':u'Zeit ($\mu s$)','num':'b','ylim':(-1.5,1.5),'xlim':(11.,14.5),'label':'Daten'},
 }
 
+
+
 plt.subplot(122)
-plt.plot(polar_fit[:,0], polar_fit[:,1], ls='-',lw=1.5,c='r')
+plt.plot(polar_fit[polar_start:,0], polar_fit[polar_start:,1], ls='-',lw=1.5,c='r')
 plt.errorbar(polar[:start,0], polar[:start,1], yerr=polar[:start,2], ls="", marker='o',lw=1.5,c='k')
 plt.xlim((11.,14.5))
 
